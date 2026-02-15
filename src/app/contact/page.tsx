@@ -1,8 +1,23 @@
+import type { Metadata } from "next";
 import Header from "@/components/Header";
 import PageHero from "@/components/PageHero";
 import Footer from "@/components/Footer";
 import AnimateIn from "@/components/AnimateIn";
+import ContactForm from "@/components/ContactForm";
 import { getOfficeLocations } from "@/lib/sanity";
+import { LocalBusinessJsonLd } from "@/components/JsonLd";
+
+export const metadata: Metadata = {
+  title: "Contact",
+  description:
+    "Get in touch with CergyPro. Reach our offices in Reston VA, New York, Atlanta, San Francisco, London, and Brussels.",
+  openGraph: {
+    title: "Contact CergyPro",
+    description:
+      "Start a conversation. Offices in Reston VA, New York, Atlanta, San Francisco, London, and Brussels.",
+    url: "https://www.cergypro.com/contact",
+  },
+};
 
 export const revalidate = 60;
 
@@ -34,6 +49,7 @@ export default async function ContactPage() {
 
   return (
     <>
+      <LocalBusinessJsonLd />
       <Header />
       <main>
         <PageHero
@@ -50,46 +66,7 @@ export default async function ContactPage() {
               <AnimateIn animation="fadeRight">
                 <div>
                   <h2 className="text-2xl font-light text-gray-900 mb-8">Get in touch</h2>
-                  <form className="space-y-6">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                      <div>
-                        <label className="block text-xs text-gray-500 uppercase tracking-wider mb-2">First Name *</label>
-                        <input type="text" className="w-full px-4 py-3 bg-white border border-gray-300 text-gray-900 text-sm placeholder:text-gray-400 focus:outline-none focus:border-gray-900 transition-colors" placeholder="John" />
-                      </div>
-                      <div>
-                        <label className="block text-xs text-gray-500 uppercase tracking-wider mb-2">Last Name *</label>
-                        <input type="text" className="w-full px-4 py-3 bg-white border border-gray-300 text-gray-900 text-sm placeholder:text-gray-400 focus:outline-none focus:border-gray-900 transition-colors" placeholder="Smith" />
-                      </div>
-                    </div>
-                    <div>
-                      <label className="block text-xs text-gray-500 uppercase tracking-wider mb-2">Email *</label>
-                      <input type="email" className="w-full px-4 py-3 bg-white border border-gray-300 text-gray-900 text-sm placeholder:text-gray-400 focus:outline-none focus:border-gray-900 transition-colors" placeholder="john@company.com" />
-                    </div>
-                    <div>
-                      <label className="block text-xs text-gray-500 uppercase tracking-wider mb-2">Organization</label>
-                      <input type="text" className="w-full px-4 py-3 bg-white border border-gray-300 text-gray-900 text-sm placeholder:text-gray-400 focus:outline-none focus:border-gray-900 transition-colors" placeholder="Your organization" />
-                    </div>
-                    <div>
-                      <label className="block text-xs text-gray-500 uppercase tracking-wider mb-2">Area of Interest</label>
-                      <select className="w-full px-4 py-3 bg-white border border-gray-300 text-gray-500 text-sm focus:outline-none focus:border-gray-900 transition-colors">
-                        <option value="">Select an area</option>
-                        <option>Digital Modernization</option>
-                        <option>Artificial Intelligence</option>
-                        <option>Data &amp; Analytics</option>
-                        <option>Cybersecurity</option>
-                        <option>Cloud Services</option>
-                        <option>Energy &amp; Utilities</option>
-                        <option>Federal Health</option>
-                        <option>Disaster Management</option>
-                        <option>Other</option>
-                      </select>
-                    </div>
-                    <div>
-                      <label className="block text-xs text-gray-500 uppercase tracking-wider mb-2">Message *</label>
-                      <textarea rows={5} className="w-full px-4 py-3 bg-white border border-gray-300 text-gray-900 text-sm placeholder:text-gray-400 focus:outline-none focus:border-gray-900 transition-colors resize-none" placeholder="Tell us about your project or challenge..." />
-                    </div>
-                    <button type="submit" className="btn-shine px-8 py-3 bg-gray-900 text-white text-sm font-semibold tracking-wider uppercase hover:bg-gray-800 transition-colors">SEND MESSAGE</button>
-                  </form>
+                  <ContactForm />
                 </div>
               </AnimateIn>
 

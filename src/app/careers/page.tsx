@@ -1,5 +1,18 @@
+import type { Metadata } from "next";
 import { getJobListings } from "@/lib/sanity";
 import CareersClient from "./CareersClient";
+
+export const metadata: Metadata = {
+  title: "Careers",
+  description:
+    "Join CergyPro's team of 9,000+ professionals. Explore open positions in technology, consulting, design, and more across the globe.",
+  openGraph: {
+    title: "Careers at CergyPro",
+    description:
+      "Do work that makes a difference. Explore open positions across technology, consulting, and design.",
+    url: "https://www.cergypro.com/careers",
+  },
+};
 
 export const revalidate = 60;
 

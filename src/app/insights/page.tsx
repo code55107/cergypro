@@ -1,5 +1,18 @@
+import type { Metadata } from "next";
 import { getArticles, getFeaturedArticle } from "@/lib/sanity";
 import InsightsClient from "./InsightsClient";
+
+export const metadata: Metadata = {
+  title: "Insights",
+  description:
+    "Explore CergyPro's latest thinking on AI, climate resilience, digital health, energy, and public policy. Articles, webinars, and case studies.",
+  openGraph: {
+    title: "Insights & Perspectives | CergyPro",
+    description:
+      "Latest thinking on AI, climate resilience, digital health, energy, and public policy.",
+    url: "https://www.cergypro.com/insights",
+  },
+};
 
 export const revalidate = 60;
 

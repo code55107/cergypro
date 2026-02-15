@@ -182,8 +182,9 @@ export default function Hero({ slides: propSlides, tabLabels: propTabLabels }: H
             <button
               onClick={() => { setActiveSlide((prev) => (prev - 1 + slides.length) % slides.length); setSlideKey((k) => k + 1); }}
               className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-white/60 hover:text-white hover:border-white/40 transition-all hover:scale-110"
+              aria-label="Previous slide"
             >
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
             </button>
@@ -207,11 +208,12 @@ export default function Hero({ slides: propSlides, tabLabels: propTabLabels }: H
           <button
             onClick={() => setIsPaused(!isPaused)}
             className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-white/60 hover:text-white hover:border-white/40 transition-all hover:scale-110"
+            aria-label={isPaused ? "Play slideshow" : "Pause slideshow"}
           >
             {isPaused ? (
-              <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21" /></svg>
+              <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><polygon points="5,3 19,12 5,21" /></svg>
             ) : (
-              <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><rect x="6" y="4" width="4" height="16" /><rect x="14" y="4" width="4" height="16" /></svg>
+              <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="4" width="4" height="16" /><rect x="14" y="4" width="4" height="16" /></svg>
             )}
           </button>
         </div>

@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Header from "@/components/Header";
 import PageHero from "@/components/PageHero";
 import Footer from "@/components/Footer";
@@ -5,6 +6,18 @@ import AnimateIn from "@/components/AnimateIn";
 import GlowCard from "@/components/GlowCard";
 import Link from "next/link";
 import { getCapabilities } from "@/lib/sanity";
+
+export const metadata: Metadata = {
+  title: "Capabilities",
+  description:
+    "Explore CergyPro's capabilities in digital modernization, AI, cloud, cybersecurity, strategy, program implementation, and creative services.",
+  openGraph: {
+    title: "Our Capabilities | CergyPro",
+    description:
+      "Full spectrum of capabilities from technology and consulting to creative services.",
+    url: "https://www.cergypro.com/capabilities",
+  },
+};
 
 export const revalidate = 60;
 

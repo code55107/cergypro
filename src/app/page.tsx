@@ -1,6 +1,19 @@
+import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import type { HeroSlide } from "@/components/Hero";
+
+export const metadata: Metadata = {
+  title: "CergyPro - Technology, Consulting & Digital Solutions",
+  description:
+    "CergyPro delivers innovative solutions for customer engagement, data centers, and digital platforms powered by AI. 9,000+ professionals worldwide.",
+  openGraph: {
+    title: "CergyPro - Technology, Consulting & Digital Solutions",
+    description:
+      "Innovative solutions for customer engagement, data centers, and digital platforms powered by AI.",
+    url: "https://www.cergypro.com",
+  },
+};
 import FeaturedCard from "@/components/FeaturedCard";
 import ContentCard from "@/components/ContentCard";
 import SectionHeading from "@/components/SectionHeading";

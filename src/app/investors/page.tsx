@@ -1,5 +1,4 @@
-"use client";
-
+import type { Metadata } from "next";
 import Header from "@/components/Header";
 import PageHero from "@/components/PageHero";
 import StatCounter from "@/components/StatCounter";
@@ -7,6 +6,18 @@ import Footer from "@/components/Footer";
 import AnimateIn from "@/components/AnimateIn";
 import GlowCard from "@/components/GlowCard";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Investors",
+  description:
+    "CergyPro investor relations — stock information (NYSE: CPRO), financial highlights, SEC filings, press releases, and corporate governance.",
+  openGraph: {
+    title: "Investor Relations | CergyPro",
+    description:
+      "Access financial reports, SEC filings, and governance information. NYSE: CPRO.",
+    url: "https://www.cergypro.com/investors",
+  },
+};
 
 const financialHighlights = [
   { label: "Revenue (FY 2024)", value: "$2.09B" },

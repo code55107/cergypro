@@ -7,6 +7,7 @@ export default function SmoothCursor() {
   const innerRef = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
   const [hovering, setHovering] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(false);
   const mouse = useRef({ x: 0, y: 0 });
   const outer = useRef({ x: 0, y: 0 });
 
@@ -14,6 +15,7 @@ export default function SmoothCursor() {
     // Only show custom cursor on desktop
     const mq = window.matchMedia("(pointer: fine)");
     if (!mq.matches) return;
+    setIsDesktop(true);
 
     const onMove = (e: MouseEvent) => {
       mouse.current = { x: e.clientX, y: e.clientY };
@@ -65,6 +67,8 @@ export default function SmoothCursor() {
       document.removeEventListener("mouseover", onOverInteractive);
     };
   }, [visible]);
+
+  if (!isDesktop) return null;
 
   return (
     <>

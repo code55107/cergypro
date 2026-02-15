@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Header from "@/components/Header";
 import PageHero from "@/components/PageHero";
 import Footer from "@/components/Footer";
@@ -6,6 +7,18 @@ import GlowCard from "@/components/GlowCard";
 import Link from "next/link";
 import Image from "next/image";
 import { getIndustries } from "@/lib/sanity";
+
+export const metadata: Metadata = {
+  title: "Industries",
+  description:
+    "CergyPro serves energy, federal health, disaster management, transportation, environmental services, aviation, and more with deep domain expertise.",
+  openGraph: {
+    title: "Industries We Serve | CergyPro",
+    description:
+      "Deep expertise across energy, health, disaster management, transportation, environmental services, and more.",
+    url: "https://www.cergypro.com/industries",
+  },
+};
 
 export const revalidate = 60;
 

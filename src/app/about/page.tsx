@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Header from "@/components/Header";
 import PageHero from "@/components/PageHero";
 import StatCounter from "@/components/StatCounter";
@@ -6,6 +7,19 @@ import AnimateIn from "@/components/AnimateIn";
 import Link from "next/link";
 import Image from "next/image";
 import { getLeaders, getTimelineEvents, getSiteSettings } from "@/lib/sanity";
+import { BreadcrumbJsonLd } from "@/components/JsonLd";
+
+export const metadata: Metadata = {
+  title: "About",
+  description:
+    "Learn about CergyPro — a purpose-driven, technology-forward company with 9,000+ professionals tackling complex challenges for over four decades.",
+  openGraph: {
+    title: "About CergyPro",
+    description:
+      "Purpose-driven. Technology-forward. People-first. Over four decades of partnering with governments, businesses, and communities.",
+    url: "https://www.cergypro.com/about",
+  },
+};
 
 export const revalidate = 60;
 
@@ -78,6 +92,12 @@ export default async function AboutPage() {
 
   return (
     <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", url: "https://www.cergypro.com" },
+          { name: "About", url: "https://www.cergypro.com/about" },
+        ]}
+      />
       <Header />
       <main>
         <PageHero
