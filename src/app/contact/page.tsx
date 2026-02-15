@@ -1,11 +1,12 @@
-"use client";
-
 import Header from "@/components/Header";
 import PageHero from "@/components/PageHero";
 import Footer from "@/components/Footer";
 import AnimateIn from "@/components/AnimateIn";
+import { getOfficeLocations } from "@/lib/sanity";
 
-const offices = [
+export const revalidate = 60;
+
+const fallbackOffices = [
   { city: "Reston, VA", address: "1902 Reston Metro Plaza, Suite 100", phone: "+1 (703) 555-0100", type: "Global Headquarters" },
   { city: "New York, NY", address: "420 Fifth Avenue, 28th Floor", phone: "+1 (212) 555-0200", type: "Regional Office" },
   { city: "Atlanta, GA", address: "191 Peachtree Street NE, Suite 3400", phone: "+1 (404) 555-0300", type: "Regional Office" },
@@ -14,7 +15,23 @@ const offices = [
   { city: "Brussels, Belgium", address: "Rue de la Loi 227, 1040", phone: "+32 2 555 0600", type: "EU Office" },
 ];
 
-export default function ContactPage() {
+export default async function ContactPage() {
+  let offices = fallbackOffices;
+
+  try {
+    const sanityOffices = await getOfficeLocations();
+    if (sanityOffices?.length > 0) {
+      offices = sanityOffices.map((o: { city: string; address: string; phone: string; locationType: string }) => ({
+        city: o.city,
+        address: o.address,
+        phone: o.phone,
+        type: o.locationType,
+      }));
+    }
+  } catch (e) {
+    console.error("Failed to fetch offices from Sanity, using fallback data:", e);
+  }
+
   return (
     <>
       <Header />
@@ -58,10 +75,10 @@ export default function ContactPage() {
                         <option value="">Select an area</option>
                         <option>Digital Modernization</option>
                         <option>Artificial Intelligence</option>
-                        <option>Data & Analytics</option>
+                        <option>Data &amp; Analytics</option>
                         <option>Cybersecurity</option>
                         <option>Cloud Services</option>
-                        <option>Energy & Utilities</option>
+                        <option>Energy &amp; Utilities</option>
                         <option>Federal Health</option>
                         <option>Disaster Management</option>
                         <option>Other</option>

@@ -4,7 +4,15 @@ import { useState, useEffect, useCallback, useRef } from "react";
 import MagneticButton from "./MagneticButton";
 import Image from "next/image";
 
-const slides = [
+export interface HeroSlide {
+  tag: string;
+  title: string;
+  subtitle: string;
+  cta: string;
+  image: string;
+}
+
+const defaultSlides: HeroSlide[] = [
   {
     tag: "CUSTOMER ENGAGEMENT",
     title: "The most trusted\nutility platform\njust got better",
@@ -31,9 +39,17 @@ const slides = [
   },
 ];
 
-const tabLabels = ["Data Centers", "ICF Sightline", "ICF Platform"];
+const defaultTabLabels = ["Data Centers", "ICF Sightline", "ICF Platform"];
 
-export default function Hero() {
+interface HeroProps {
+  slides?: HeroSlide[];
+  tabLabels?: string[];
+}
+
+export default function Hero({ slides: propSlides, tabLabels: propTabLabels }: HeroProps) {
+  const slides = propSlides && propSlides.length > 0 ? propSlides : defaultSlides;
+  const tabLabels = propTabLabels && propTabLabels.length > 0 ? propTabLabels : defaultTabLabels;
+
   const [activeSlide, setActiveSlide] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const [loaded, setLoaded] = useState(false);
@@ -49,7 +65,7 @@ export default function Hero() {
   const nextSlide = useCallback(() => {
     setActiveSlide((prev) => (prev + 1) % slides.length);
     setSlideKey((k) => k + 1);
-  }, []);
+  }, [slides.length]);
 
   useEffect(() => {
     if (isPaused) return;

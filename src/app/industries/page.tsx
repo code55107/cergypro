@@ -1,5 +1,3 @@
-"use client";
-
 import Header from "@/components/Header";
 import PageHero from "@/components/PageHero";
 import Footer from "@/components/Footer";
@@ -7,65 +5,38 @@ import AnimateIn from "@/components/AnimateIn";
 import GlowCard from "@/components/GlowCard";
 import Link from "next/link";
 import Image from "next/image";
+import { getIndustries } from "@/lib/sanity";
 
-const industries = [
-  {
-    name: "Energy & Utilities",
-    description:
-      "Helping energy providers modernize grids, engage customers, and transition to clean energy solutions.",
-    image: "/images/industry-energy.jpg",
-  },
-  {
-    name: "Federal Health",
-    description:
-      "Supporting government health agencies with digital transformation, data analytics, and improved patient outcomes.",
-    image: "/images/industry-health.jpg",
-  },
-  {
-    name: "Disaster Management",
-    description:
-      "Providing end-to-end disaster preparedness, response, and recovery solutions that save lives and reduce costs.",
-    image: "/images/industry-disaster.jpg",
-  },
-  {
-    name: "Transportation",
-    description:
-      "Advancing smart mobility, infrastructure resilience, and sustainable transportation systems worldwide.",
-    image: "/images/industry-transport.jpg",
-  },
-  {
-    name: "Environmental Services",
-    description:
-      "Driving environmental compliance, remediation, and sustainability strategies for public and private sectors.",
-    image: "/images/industry-environment.jpg",
-  },
-  {
-    name: "Climate Resilience",
-    description:
-      "Building adaptive strategies that help communities and organizations withstand and recover from climate impacts.",
-    image: "/images/industry-climate.jpg",
-  },
-  {
-    name: "Aviation",
-    description:
-      "Optimizing aviation operations, air traffic management, and airport infrastructure through technology and analytics.",
-    image: "/images/industry-aviation.jpg",
-  },
-  {
-    name: "U.S. Federal",
-    description:
-      "Partnering with federal agencies to deliver mission-critical programs, IT modernization, and policy implementation.",
-    image: "/images/industry-federal.jpg",
-  },
-  {
-    name: "Social Programs",
-    description:
-      "Designing and implementing programs that strengthen education, workforce development, and community well-being.",
-    image: "/images/industry-social.jpg",
-  },
+export const revalidate = 60;
+
+const fallbackIndustries = [
+  { name: "Energy & Utilities", description: "Helping energy providers modernize grids, engage customers, and transition to clean energy solutions.", image: "/images/industry-energy.jpg" },
+  { name: "Federal Health", description: "Supporting government health agencies with digital transformation, data analytics, and improved patient outcomes.", image: "/images/industry-health.jpg" },
+  { name: "Disaster Management", description: "Providing end-to-end disaster preparedness, response, and recovery solutions that save lives and reduce costs.", image: "/images/industry-disaster.jpg" },
+  { name: "Transportation", description: "Advancing smart mobility, infrastructure resilience, and sustainable transportation systems worldwide.", image: "/images/industry-transport.jpg" },
+  { name: "Environmental Services", description: "Driving environmental compliance, remediation, and sustainability strategies for public and private sectors.", image: "/images/industry-environment.jpg" },
+  { name: "Climate Resilience", description: "Building adaptive strategies that help communities and organizations withstand and recover from climate impacts.", image: "/images/industry-climate.jpg" },
+  { name: "Aviation", description: "Optimizing aviation operations, air traffic management, and airport infrastructure through technology and analytics.", image: "/images/industry-aviation.jpg" },
+  { name: "U.S. Federal", description: "Partnering with federal agencies to deliver mission-critical programs, IT modernization, and policy implementation.", image: "/images/industry-federal.jpg" },
+  { name: "Social Programs", description: "Designing and implementing programs that strengthen education, workforce development, and community well-being.", image: "/images/industry-social.jpg" },
 ];
 
-export default function IndustriesPage() {
+export default async function IndustriesPage() {
+  let industries = fallbackIndustries;
+
+  try {
+    const sanityIndustries = await getIndustries();
+    if (sanityIndustries?.length > 0) {
+      industries = sanityIndustries.map((ind: { name: string; description: string; image: string }) => ({
+        name: ind.name,
+        description: ind.description,
+        image: ind.image,
+      }));
+    }
+  } catch (e) {
+    console.error("Failed to fetch industries from Sanity, using fallback data:", e);
+  }
+
   return (
     <>
       <Header />

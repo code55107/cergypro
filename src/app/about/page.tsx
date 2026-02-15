@@ -1,5 +1,3 @@
-"use client";
-
 import Header from "@/components/Header";
 import PageHero from "@/components/PageHero";
 import StatCounter from "@/components/StatCounter";
@@ -7,8 +5,11 @@ import Footer from "@/components/Footer";
 import AnimateIn from "@/components/AnimateIn";
 import Link from "next/link";
 import Image from "next/image";
+import { getLeaders, getTimelineEvents, getSiteSettings } from "@/lib/sanity";
 
-const timeline = [
+export const revalidate = 60;
+
+const fallbackTimeline = [
   { year: "1969", event: "Founded as a research and consulting firm focused on social programs and public policy." },
   { year: "1980", event: "Expanded into environmental services, becoming a leader in ecological assessment." },
   { year: "1999", event: "Entered the technology consulting space with digital modernization capabilities." },
@@ -18,7 +19,7 @@ const timeline = [
   { year: "2024", event: "Introduced Sightline platform, powered by responsible AI for utility customer engagement." },
 ];
 
-const leaders = [
+const fallbackLeaders = [
   { name: "Sarah Chen", role: "Chief Executive Officer", image: "/images/leader-1.jpg" },
   { name: "Michael Torres", role: "Chief Operating Officer", image: "/images/leader-2.jpg" },
   { name: "Dr. Amara Osei", role: "Chief Technology Officer", image: "/images/leader-3.jpg" },
@@ -34,7 +35,47 @@ const values = [
   { title: "Accountable", description: "We hold ourselves to the highest standards of ethics, transparency, and measurable results." },
 ];
 
-export default function AboutPage() {
+const fallbackStats = [
+  { value: "9,000+", label: "Employees worldwide" },
+  { value: "70+", label: "Global office locations" },
+  { value: "$2B+", label: "Annual revenue" },
+  { value: "2,000+", label: "Active client engagements" },
+];
+
+export default async function AboutPage() {
+  let timeline = fallbackTimeline;
+  let leaders = fallbackLeaders;
+  let stats = fallbackStats;
+
+  try {
+    const [sanityLeaders, sanityTimeline, settings] = await Promise.all([
+      getLeaders(),
+      getTimelineEvents(),
+      getSiteSettings(),
+    ]);
+
+    if (sanityLeaders?.length > 0) {
+      leaders = sanityLeaders.map((l: { name: string; role: string; image: string }) => ({
+        name: l.name,
+        role: l.role,
+        image: l.image,
+      }));
+    }
+
+    if (sanityTimeline?.length > 0) {
+      timeline = sanityTimeline.map((t: { year: string; event: string }) => ({
+        year: t.year,
+        event: t.event,
+      }));
+    }
+
+    if (settings?.stats?.length > 0) {
+      stats = settings.stats;
+    }
+  } catch (e) {
+    console.error("Failed to fetch about data from Sanity, using fallback data:", e);
+  }
+
   return (
     <>
       <Header />
@@ -49,14 +90,7 @@ export default function AboutPage() {
         {/* Stats */}
         <section className="bg-white border-b border-gray-200">
           <div className="max-w-[1400px] mx-auto px-6 py-16">
-            <StatCounter
-              stats={[
-                { value: "9,000+", label: "Employees worldwide" },
-                { value: "70+", label: "Global office locations" },
-                { value: "$2B+", label: "Annual revenue" },
-                { value: "2,000+", label: "Active client engagements" },
-              ]}
-            />
+            <StatCounter stats={stats} />
           </div>
         </section>
 

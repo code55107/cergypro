@@ -1,13 +1,14 @@
-"use client";
-
 import Header from "@/components/Header";
 import PageHero from "@/components/PageHero";
 import Footer from "@/components/Footer";
 import AnimateIn from "@/components/AnimateIn";
 import GlowCard from "@/components/GlowCard";
 import Link from "next/link";
+import { getCapabilities } from "@/lib/sanity";
 
-const capabilities = [
+export const revalidate = 60;
+
+const fallbackCapabilities = [
   {
     category: "TECHNOLOGY",
     items: [
@@ -38,7 +39,31 @@ const capabilities = [
   },
 ];
 
-export default function CapabilitiesPage() {
+export default async function CapabilitiesPage() {
+  let capabilities = fallbackCapabilities;
+
+  try {
+    const sanityCapabilities = await getCapabilities();
+    if (sanityCapabilities?.length > 0) {
+      // Group capabilities by category
+      const grouped: Record<string, { name: string; description: string }[]> = {};
+      for (const cap of sanityCapabilities) {
+        const cat = (cap as { category: string }).category?.toUpperCase() || "OTHER";
+        if (!grouped[cat]) grouped[cat] = [];
+        grouped[cat].push({
+          name: (cap as { name: string }).name,
+          description: (cap as { description: string }).description,
+        });
+      }
+      capabilities = Object.entries(grouped).map(([category, items]) => ({
+        category,
+        items,
+      }));
+    }
+  } catch (e) {
+    console.error("Failed to fetch capabilities from Sanity, using fallback data:", e);
+  }
+
   return (
     <>
       <Header />
@@ -51,7 +76,7 @@ export default function CapabilitiesPage() {
         />
 
         {/* Capabilities Sections */}
-        {capabilities.map((section, sIdx) => (
+        {capabilities.map((section) => (
           <section
             key={section.category}
             className="bg-white"
