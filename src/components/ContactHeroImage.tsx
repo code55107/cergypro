@@ -66,8 +66,8 @@ export default function ContactHeroImage() {
           }}
         >
           <Image
-            src="/images/team-collaboration.jpg"
-            alt="CergyPro team working together in a modern office environment"
+            src="/images/contact-hero.jpg"
+            alt="Modern glass skyscrapers reaching toward the sky"
             fill
             className="object-cover"
             sizes="100vw"
