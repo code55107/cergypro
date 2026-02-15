@@ -4,6 +4,7 @@ import PageHero from "@/components/PageHero";
 import Footer from "@/components/Footer";
 import AnimateIn from "@/components/AnimateIn";
 import ContactForm from "@/components/ContactForm";
+import ContactHeroImage from "@/components/ContactHeroImage";
 import { getOfficeLocations } from "@/lib/sanity";
 import { LocalBusinessJsonLd } from "@/components/JsonLd";
 
@@ -58,6 +59,8 @@ export default async function ContactPage() {
           subtitle="Whether you have a specific challenge in mind or want to explore how we can work together, we are here to help."
           bgGradient="from-pink-950/30 via-black to-black"
         />
+
+        <ContactHeroImage />
 
         <section className="bg-white">
           <div className="max-w-[1400px] mx-auto px-6 py-20">
