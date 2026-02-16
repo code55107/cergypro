@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 40" fill="none">
+  <path d="M20 2L4 12v5l16 10 16-10v-5L20 2z" fill="#FF3621"/>
+  <path d="M4 17v5l16 10 16-10v-5L20 27 4 17z" fill="#FF3621" opacity=".7"/>
+  <path d="M4 22v5l16 10 16-10v-5L20 32 4 22z" fill="#FF3621" opacity=".4"/>
+  <text x="42" y="25" font-family="DM Sans, Arial, sans-serif" font-size="13" font-weight="600" fill="#FF3621">Databricks</text>
+</svg>

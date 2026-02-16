@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 40" fill="none">
+  <path d="M20 4L6 20l14 16 14-16L20 4zm0 4.5L29.5 20 20 31.5 10.5 20 20 8.5z" fill="#FA582D"/>
+  <path d="M20 13l-7 7 7 7 7-7-7-7z" fill="#FA582D"/>
+  <text x="42" y="18" font-family="Arial, sans-serif" font-size="10" font-weight="700" fill="#333">PALO ALTO</text>
+  <text x="42" y="30" font-family="Arial, sans-serif" font-size="10" font-weight="400" fill="#333">NETWORKS</text>
+</svg>

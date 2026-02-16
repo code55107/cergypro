@@ -234,27 +234,79 @@ export default async function CapabilitiesPage() {
         })}
 
         {/* Partners */}
-        <section className="bg-white border-t border-gray-200">
-          <div className="max-w-[1400px] mx-auto px-6 py-20 text-center">
-            <AnimateIn animation="fadeUp">
-              <p className="text-gray-500 text-xs font-semibold tracking-[0.2em] uppercase mb-4">
-                PARTNERSHIPS
-              </p>
-              <h2 className="text-3xl font-light text-gray-900 mb-6">
-                Strategic technology alliances
-              </h2>
-              <p className="text-gray-600 text-sm max-w-xl mx-auto mb-12">
-                We maintain deep partnerships with the world&apos;s leading technology platforms to deliver best-in-class solutions across every engagement.
-              </p>
-            </AnimateIn>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {["AWS", "Microsoft Azure", "Google Cloud", "Salesforce", "Palo Alto Networks", "Snowflake", "Databricks", "Splunk"].map((partner, i) => (
-                <AnimateIn key={partner} animation="scaleUp" delay={i * 80}>
-                  <div className="bg-gray-50 rounded-sm py-8 px-6 flex items-center justify-center hover:bg-gray-100 transition-colors">
-                    <span className="text-gray-500 text-sm font-medium">{partner}</span>
+        <section className="bg-gray-900">
+          <div className="max-w-[1400px] mx-auto px-6 py-20 md:py-28">
+            <div className="flex flex-col lg:flex-row gap-12 lg:gap-20">
+              {/* Left text */}
+              <AnimateIn animation="fadeUp" className="lg:w-1/3 shrink-0">
+                <p className="text-accent-cyan text-xs font-semibold tracking-[0.2em] uppercase mb-4">
+                  PARTNERSHIPS
+                </p>
+                <h2 className="text-3xl sm:text-4xl font-light text-white leading-tight mb-5">
+                  Strategic technology alliances
+                </h2>
+                <p className="text-gray-400 text-base leading-relaxed mb-6">
+                  We maintain deep partnerships with the world&apos;s leading technology platforms to deliver best-in-class solutions across every engagement.
+                </p>
+                <div className="flex items-center gap-6 text-sm">
+                  <div className="text-center">
+                    <span className="block text-2xl font-light text-white">8</span>
+                    <span className="text-gray-500 text-xs uppercase tracking-wider">Partners</span>
                   </div>
-                </AnimateIn>
-              ))}
+                  <div className="w-px h-8 bg-gray-700" />
+                  <div className="text-center">
+                    <span className="block text-2xl font-light text-white">500+</span>
+                    <span className="text-gray-500 text-xs uppercase tracking-wider">Certifications</span>
+                  </div>
+                  <div className="w-px h-8 bg-gray-700" />
+                  <div className="text-center">
+                    <span className="block text-2xl font-light text-white">15+</span>
+                    <span className="text-gray-500 text-xs uppercase tracking-wider">Years</span>
+                  </div>
+                </div>
+              </AnimateIn>
+
+              {/* Right logo grid */}
+              <div className="lg:w-2/3">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                  {[
+                    { name: "AWS", logo: "/images/partners/aws.svg", color: "#FF9900", desc: "Premier Consulting" },
+                    { name: "Microsoft Azure", logo: "/images/partners/azure.svg", color: "#0089D6", desc: "Gold Partner" },
+                    { name: "Google Cloud", logo: "/images/partners/gcp.svg", color: "#4285F4", desc: "Partner Advantage" },
+                    { name: "Salesforce", logo: "/images/partners/salesforce.svg", color: "#00A1E0", desc: "Summit Partner" },
+                    { name: "Palo Alto Networks", logo: "/images/partners/paloalto.svg", color: "#FA582D", desc: "Platinum Partner" },
+                    { name: "Snowflake", logo: "/images/partners/snowflake.svg", color: "#29B5E8", desc: "Premier Partner" },
+                    { name: "Databricks", logo: "/images/partners/databricks.svg", color: "#FF3621", desc: "Consulting Partner" },
+                    { name: "Splunk", logo: "/images/partners/splunk.svg", color: "#65A637", desc: "Premier Partner" },
+                  ].map((partner, i) => (
+                    <AnimateIn key={partner.name} animation="scaleUp" delay={i * 80}>
+                      <div
+                        className="group relative bg-gray-800/50 border border-gray-700/50 rounded-sm p-6 flex flex-col items-center justify-center text-center hover:border-gray-600 transition-all duration-300 overflow-hidden"
+                      >
+                        {/* Top accent line on hover */}
+                        <div
+                          className="absolute top-0 left-0 right-0 h-[2px] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"
+                          style={{ backgroundColor: partner.color }}
+                        />
+                        {/* Logo */}
+                        <div className="h-10 flex items-center justify-center mb-3 opacity-60 group-hover:opacity-100 transition-opacity duration-300">
+                          <Image
+                            src={partner.logo}
+                            alt={partner.name}
+                            width={120}
+                            height={40}
+                            className="object-contain max-h-10"
+                          />
+                        </div>
+                        {/* Partner tier */}
+                        <span className="text-gray-500 text-[10px] font-medium tracking-wider uppercase group-hover:text-gray-400 transition-colors">
+                          {partner.desc}
+                        </span>
+                      </div>
+                    </AnimateIn>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </section>
