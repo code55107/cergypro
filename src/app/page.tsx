@@ -106,16 +106,19 @@ const fallbackStories = [
     tag: "ASTRAZENECA · HEALTHCARE",
     title: "AstraZeneca saves 30,000+ hours annually by replacing manual tasks with AI-powered automation — so researchers can focus on saving lives",
     imageSrc: "/images/digital-health.jpg",
+    href: "/insights/astrazeneca-servicenow",
   },
   {
     tag: "SIEMENS · MANUFACTURING",
     title: "Siemens saves 1 million hours through automation while resolving 210,000 tickets monthly without human intervention",
     imageSrc: "/images/utility-engagement.jpg",
+    href: "/insights/siemens-servicenow",
   },
   {
     tag: "BELL CANADA · TELECOM",
     title: "Bell Canada deflects 3 million customer support calls annually and automates 90% of dispatch tasks with ServiceNow",
     imageSrc: "/images/analytics-dashboard.jpg",
+    href: "/insights/bell-canada-servicenow",
   },
 ];
 
@@ -388,7 +391,7 @@ export default async function Home() {
                     tag={story.tag}
                     title={story.title}
                     imageSrc={story.imageSrc}
-                    href="/insights"
+                    href={story.href || "/insights"}
                   />
                 </AnimateIn>
               ))}

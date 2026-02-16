@@ -147,6 +147,48 @@ const fallbackArticles: ArticleData[] = [
       "The agencies seeing the most success are those that take a portfolio approach to RPA — identifying and prioritizing automation opportunities across departments, establishing centers of excellence to manage bot development and governance, and measuring ROI rigorously to build the case for expanded investment.",
     ],
   },
+  {
+    slug: "astrazeneca-servicenow",
+    tag: "ASTRAZENECA · HEALTHCARE",
+    title: "AstraZeneca saves 30,000+ hours annually by replacing manual tasks with AI-powered automation",
+    description: "How one of the world\u2019s largest pharmaceutical companies unified 60,000 laboratory requests and transformed employee onboarding using ServiceNow\u2019s App Engine, ITSM, HRSD, and Now Assist.",
+    imageSrc: "/images/digital-health.jpg",
+    body: [
+      "AstraZeneca, a global biopharmaceutical company with over 89,000 employees, faced a challenge familiar to large R&D-intensive organizations: its scientists and researchers were spending thousands of hours on manual administrative tasks instead of focusing on discovering life-changing medicines. Laboratory requests, IT service tickets, and HR processes were scattered across disconnected systems, creating bottlenecks and frustration.",
+      "The company turned to ServiceNow as its enterprise-wide workflow platform, consolidating fragmented processes onto a single system. Using ServiceNow App Engine, AstraZeneca built custom applications to route and manage over 60,000 laboratory requests through one unified system — replacing manual email chains and spreadsheets with automated workflows that complete in seconds what previously took 30 minutes.",
+      "The results have been transformative. AstraZeneca now saves more than 30,000 hours every year through automation across IT, HR, and laboratory operations. Tasks that once required manual handoffs between departments are now resolved automatically, freeing scientists to focus on research and drug development rather than paperwork.",
+      "Beyond IT, AstraZeneca deployed ServiceNow HR Service Delivery to overhaul its employee onboarding experience. The new Onboarding 2.0 program, powered by Now Assist\u2019s generative AI capabilities, is projected to save hiring managers over 90,000 hours annually by automating provisioning, compliance checks, and new-hire orientation workflows.",
+      "AstraZeneca\u2019s success demonstrates a pattern we see across healthcare and life sciences organizations: the greatest ROI from ServiceNow comes not from a single module, but from treating the platform as an enterprise-wide automation layer that spans IT, HR, and domain-specific operations. When the platform becomes the connective tissue between departments, the compounding efficiency gains are substantial.",
+    ],
+  },
+  {
+    slug: "siemens-servicenow",
+    tag: "SIEMENS · MANUFACTURING",
+    title: "Siemens saves 1 million hours through automation while resolving 210,000 tickets monthly without human intervention",
+    description: "How a global industrial conglomerate unified HR, Finance, and Procurement services for 360,000+ employees using ServiceNow AI Agents, App Engine, and Workflow Data Fabric.",
+    imageSrc: "/images/utility-engagement.jpg",
+    body: [
+      "Siemens, the global technology and industrial manufacturing conglomerate with over 360,000 employees worldwide, operates one of the largest Global Business Services (GBS) organizations in the world. Managing HR, Finance, Procurement, and IT services at that scale — across dozens of countries, languages, and legacy systems — required a fundamentally different approach to enterprise service delivery.",
+      "Siemens selected ServiceNow as the backbone of its GBS transformation, deploying the platform across HR Service Delivery, IT Service Management, and enterprise workflow automation. The scale of the deployment is staggering: 210,000 support tickets are now resolved automatically every month without any human intervention, powered by ServiceNow\u2019s AI-driven routing, categorization, and resolution capabilities.",
+      "The cumulative impact has been extraordinary. Siemens has saved over 1 million hours through workflow automation — time that has been redirected from repetitive administrative tasks to higher-value work across the organization. The company harmonized fragmented legacy systems into a unified service experience, giving employees a single portal to access HR, Finance, and Procurement services regardless of their location or business unit.",
+      "Looking ahead, Siemens is preparing its ServiceNow environment for the next wave of AI-powered automation. Using ServiceNow\u2019s Workflow Data Fabric, the company is unifying data across its enterprise systems to enable Agentic AI — autonomous AI agents that can handle increasingly complex multi-step service requests without human intervention.",
+      "The Siemens story illustrates what enterprise-scale ServiceNow transformation looks like when it is done right: a unified platform that spans multiple business functions, AI automation that delivers measurable productivity gains, and a data strategy that positions the organization for the next generation of intelligent workflows.",
+    ],
+  },
+  {
+    slug: "bell-canada-servicenow",
+    tag: "BELL CANADA · TELECOM",
+    title: "Bell Canada deflects 3 million customer support calls annually and automates 90% of dispatch tasks with ServiceNow",
+    description: "How Canada\u2019s largest telecommunications company transformed customer service and field operations using ServiceNow\u2019s Field Service Management and AI-powered Virtual Repair.",
+    imageSrc: "/images/analytics-dashboard.jpg",
+    body: [
+      "Bell Canada, the country\u2019s largest telecommunications provider serving millions of residential and business customers, was grappling with the twin challenges of rising customer support volumes and the operational complexity of managing a nationwide field service workforce. With millions of service calls annually and technicians deployed across vast geographic areas, even small improvements in efficiency could translate to massive cost savings and better customer outcomes.",
+      "Bell Canada deployed ServiceNow\u2019s telecommunications-specific solutions — including Field Service Management, Sales and Order Management, and Telecommunications Service Management — to reimagine how it delivers customer service and manages field operations. The centerpiece of the transformation was an AI-powered Virtual Repair capability that enables customers to diagnose and resolve common service issues without ever speaking to a human agent.",
+      "The results speak for themselves. Bell Canada now deflects over 3 million customer support calls annually through self-service and AI-powered resolution. The Virtual Repair tool alone has saved 500,000 calls by guiding customers through troubleshooting steps that resolve their issues in minutes. For the calls that do require human intervention, automated triage ensures they reach the right specialist on the first attempt.",
+      "On the field operations side, ServiceNow has automated 90% of dispatch-related tasks — scheduling, routing, parts allocation, and technician assignment. What previously required manual coordination across multiple systems now happens automatically, with AI optimizing technician routes and ensuring the right parts are available at the job site before the technician arrives.",
+      "Bell Canada\u2019s transformation demonstrates the power of industry-specific ServiceNow solutions. By deploying purpose-built telecommunications workflows rather than generic service management tools, Bell achieved faster time-to-value and deeper integration with its existing network management and customer billing systems. For telecom providers looking to reduce costs while improving customer experience, the Bell Canada playbook offers a proven roadmap.",
+    ],
+  },
 ];
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
