@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40" fill="none">
+  <path d="M10 12 L22 12 L10 28 Z" fill="#03363D"/>
+  <path d="M22 28 L22 12 L10 28 Z" fill="#03363D" opacity="0.6"/>
+  <circle cx="28" cy="15" r="4" fill="#03363D"/>
+  <path d="M24 28 L32 28 L28 20 Z" fill="#03363D"/>
+  <text x="38" y="24" font-family="Arial, sans-serif" font-size="12" fill="white" font-weight="700">zendesk</text>
+</svg>

@@ -252,7 +252,7 @@ export default async function CapabilitiesPage() {
                 </p>
                 <div className="flex items-center gap-6 text-sm">
                   <div className="text-center">
-                    <span className="block text-2xl font-light text-white">8</span>
+                    <span className="block text-2xl font-light text-white">7</span>
                     <span className="text-gray-500 text-xs uppercase tracking-wider">Partners</span>
                   </div>
                   <div className="w-px h-8 bg-gray-700" />
@@ -272,14 +272,13 @@ export default async function CapabilitiesPage() {
               <div className="lg:w-2/3">
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                   {[
-                    { name: "AWS", logo: "/images/partners/aws.svg", color: "#FF9900", desc: "Premier Consulting" },
-                    { name: "Microsoft Azure", logo: "/images/partners/azure.svg", color: "#0089D6", desc: "Gold Partner" },
-                    { name: "Google Cloud", logo: "/images/partners/gcp.svg", color: "#4285F4", desc: "Partner Advantage" },
+                    { name: "AWS", logo: "/images/partners/aws.svg", color: "#FF9900", desc: "Cloud Services" },
+                    { name: "Microsoft", logo: "/images/partners/microsoft.svg", color: "#00A4EF", desc: "Solutions Partner" },
+                    { name: "Logitech", logo: "/images/partners/logitech.svg", color: "#00B8FC", desc: "Technology Partner" },
+                    { name: "Dell", logo: "/images/partners/dell.svg", color: "#007DB8", desc: "Infrastructure Partner" },
+                    { name: "Zendesk", logo: "/images/partners/zendesk.svg", color: "#03363D", desc: "CX Partner" },
                     { name: "Salesforce", logo: "/images/partners/salesforce.svg", color: "#00A1E0", desc: "Summit Partner" },
-                    { name: "Palo Alto Networks", logo: "/images/partners/paloalto.svg", color: "#FA582D", desc: "Platinum Partner" },
-                    { name: "Snowflake", logo: "/images/partners/snowflake.svg", color: "#29B5E8", desc: "Premier Partner" },
-                    { name: "Databricks", logo: "/images/partners/databricks.svg", color: "#FF3621", desc: "Consulting Partner" },
-                    { name: "Splunk", logo: "/images/partners/splunk.svg", color: "#65A637", desc: "Premier Partner" },
+                    { name: "Ingram Micro", logo: "/images/partners/ingrammicro.svg", color: "#0073CF", desc: "Distribution Partner" },
                   ].map((partner, i) => (
                     <AnimateIn key={partner.name} animation="scaleUp" delay={i * 80}>
                       <div
