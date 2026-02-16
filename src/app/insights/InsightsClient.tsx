@@ -47,6 +47,8 @@ export default function InsightsClient({ articles, featured, categories }: Insig
           title="Perspectives on the issues that matter"
           subtitle="Expert analysis, research, and thought leadership from across our practice areas."
           bgGradient="from-blue-950/40 via-black to-black"
+          bgImage="/images/insights-hero.jpg"
+          bgImageAlt="Earth at night seen from space with city lights glowing"
         />
 
         {/* Filters */}

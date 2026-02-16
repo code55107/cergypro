@@ -51,6 +51,8 @@ export default function InvestorsPage() {
           title="Delivering value for our stakeholders"
           subtitle="CergyPro is publicly traded on the NYSE under the ticker symbol CPRO. Access financial reports, SEC filings, and governance information."
           bgGradient="from-yellow-950/30 via-black to-black"
+          bgImage="/images/investors-hero.jpg"
+          bgImageAlt="Corporate glass building against a clear blue sky"
         />
 
         {/* Stock Info Banner */}
