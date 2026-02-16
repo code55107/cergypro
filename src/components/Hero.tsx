@@ -14,32 +14,32 @@ export interface HeroSlide {
 
 const defaultSlides: HeroSlide[] = [
   {
-    tag: "DATA CENTER SOLUTIONS",
-    title: "The race to build\ndata centers\nis on",
+    tag: "AI & ANALYTICS",
+    title: "Turning complexity\ninto clarity",
     subtitle:
-      "Accelerate development while safeguarding affordability, grid reliability, and community trust.",
-    cta: "EXPLORE SOLUTIONS",
+      "Enterprise-grade AI and advanced analytics that help organizations make faster, smarter decisions at scale.",
+    cta: "EXPLORE AI SOLUTIONS",
     image: "/images/hero-1.jpg",
-  },
-  {
-    tag: "AGENTIC AI",
-    title: "Deploy AI faster\nwith more flexibility\nand stronger security",
-    subtitle:
-      "CergyPro Fathom\u2122 enables rapid, secure agentic AI deployment across your enterprise.",
-    cta: "LEARN MORE",
-    image: "/images/hero-2.jpg",
   },
   {
     tag: "CUSTOMER PLATFORMS",
     title: "The most trusted\nutility platform\njust got smarter",
     subtitle:
-      "Sightline\u00AE now responsibly powered with AI \u2014 delivering personalized engagement at scale.",
+      "Sightline\u00AE now responsibly powered with AI \u2014 delivering personalized customer engagement at scale.",
     cta: "DISCOVER SIGHTLINE",
+    image: "/images/hero-2.jpg",
+  },
+  {
+    tag: "GOVERNMENT MODERNIZATION",
+    title: "Modernizing the\nmissions that matter\nmost",
+    subtitle:
+      "Helping federal, state, and local agencies accelerate digital transformation while strengthening security.",
+    cta: "SEE OUR WORK",
     image: "/images/hero-3.jpg",
   },
 ];
 
-const defaultTabLabels = ["Data Centers", "CergyPro Fathom", "Sightline"];
+const defaultTabLabels = ["AI & Analytics", "Sightline", "Government"];
 
 interface HeroProps {
   slides?: HeroSlide[];

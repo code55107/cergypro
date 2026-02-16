@@ -4,13 +4,13 @@ import Hero from "@/components/Hero";
 import type { HeroSlide } from "@/components/Hero";
 
 export const metadata: Metadata = {
-  title: "CergyPro - Technology, Consulting & Digital Solutions",
+  title: "CergyPro - Technology Consulting, AI & Digital Transformation",
   description:
-    "CergyPro delivers innovative solutions for customer engagement, data centers, and digital platforms powered by AI. 9,000+ professionals worldwide.",
+    "CergyPro is a global technology consulting firm delivering AI, analytics, cybersecurity, and digital transformation for government, commercial, and energy clients. 9,000+ professionals worldwide.",
   openGraph: {
-    title: "CergyPro - Technology, Consulting & Digital Solutions",
+    title: "CergyPro - Technology Consulting, AI & Digital Transformation",
     description:
-      "Innovative solutions for customer engagement, data centers, and digital platforms powered by AI.",
+      "Global technology consulting delivering AI, analytics, cybersecurity, and digital transformation across government, commercial, and energy sectors.",
     url: "https://www.cergypro.com",
   },
 };
@@ -30,24 +30,24 @@ export const revalidate = 60;
 // Fallback data used when Sanity has no content yet
 const fallbackSlides: HeroSlide[] = [
   {
-    tag: "DATA CENTER SOLUTIONS",
-    title: "The race to build\ndata centers\nis on",
-    subtitle: "Accelerate development while safeguarding affordability, grid reliability, and community trust.",
-    cta: "EXPLORE SOLUTIONS",
+    tag: "AI & ANALYTICS",
+    title: "Turning complexity\ninto clarity",
+    subtitle: "Enterprise-grade AI and advanced analytics that help organizations make faster, smarter decisions at scale.",
+    cta: "EXPLORE AI SOLUTIONS",
     image: "/images/hero-1.jpg",
-  },
-  {
-    tag: "AGENTIC AI",
-    title: "Deploy AI faster\nwith more flexibility\nand stronger security",
-    subtitle: "CergyPro Fathom\u2122 enables rapid, secure agentic AI deployment across your enterprise.",
-    cta: "LEARN MORE",
-    image: "/images/hero-2.jpg",
   },
   {
     tag: "CUSTOMER PLATFORMS",
     title: "The most trusted\nutility platform\njust got smarter",
-    subtitle: "Sightline\u00AE now responsibly powered with AI \u2014 delivering personalized engagement at scale.",
+    subtitle: "Sightline\u00AE now responsibly powered with AI \u2014 delivering personalized customer engagement at scale.",
     cta: "DISCOVER SIGHTLINE",
+    image: "/images/hero-2.jpg",
+  },
+  {
+    tag: "GOVERNMENT MODERNIZATION",
+    title: "Modernizing the\nmissions that matter\nmost",
+    subtitle: "Helping federal, state, and local agencies accelerate digital transformation while strengthening security.",
+    cta: "SEE OUR WORK",
     image: "/images/hero-3.jpg",
   },
 ];
@@ -61,21 +61,21 @@ const fallbackStats = [
 
 const fallbackArticles = [
   {
-    tag: "RESEARCH",
-    title: "Strategic site selection for the next generation of data centers",
-    description: "How utilities and developers can balance speed-to-market with grid impact, environmental review, and long-term community benefit.",
-    imageSrc: "/images/energy-grid.jpg",
-  },
-  {
     tag: "ARTIFICIAL INTELLIGENCE",
-    title: "From pilot to production: rapid AI prototyping for government agencies",
-    description: "Why the agencies deploying AI fastest are the ones treating governance as a feature, not a gate.",
+    title: "From pilot to production: why AI governance is a feature, not a gate",
+    description: "The agencies and enterprises deploying AI fastest are embedding responsible governance from day one. Here\u2019s what they\u2019re doing differently.",
     imageSrc: "/images/ai-governance.jpg",
   },
   {
-    tag: "ENERGY & ENVIRONMENT",
-    title: "State and local strategies for accelerating clean energy programs",
-    description: "Lessons from the jurisdictions cutting program launch times in half while doubling participation rates.",
+    tag: "CYBERSECURITY",
+    title: "Zero trust in practice: lessons from the federal frontline",
+    description: "How three agencies moved beyond frameworks to fully operational zero-trust architectures \u2014 and the pitfalls they avoided.",
+    imageSrc: "/images/cybersecurity-policy.jpg",
+  },
+  {
+    tag: "ENERGY & UTILITIES",
+    title: "Grid modernization: balancing reliability with the clean energy transition",
+    description: "Utilities face a dual mandate \u2014 decarbonize while keeping the lights on. New approaches to grid planning are making both possible.",
     imageSrc: "/images/distributed-energy.jpg",
   },
 ];
@@ -83,17 +83,17 @@ const fallbackArticles = [
 const fallbackWebinars = [
   {
     tag: "WEBINAR",
-    title: "CMS fraud prevention: leveraging analytics to protect program integrity",
-    imageSrc: "/images/analytics-dashboard.jpg",
+    title: "Enterprise AI governance: building trust at scale",
+    imageSrc: "/images/generative-ai.jpg",
   },
   {
     tag: "WEBINAR",
-    title: "State energy strategy: aligning climate goals with ratepayer value",
-    imageSrc: "/images/ev-infrastructure.jpg",
+    title: "Modernizing legacy systems without disrupting operations",
+    imageSrc: "/images/cloud-platform.jpg",
   },
   {
     tag: "VIRTUAL EVENT",
-    title: "CergyPro Innovation Summit: Building trust in the age of agentic AI",
+    title: "CergyPro Perspectives: The future of digital government",
     imageSrc: "/images/innovation-summit.jpg",
   },
 ];
@@ -101,25 +101,25 @@ const fallbackWebinars = [
 const fallbackStories = [
   {
     tag: "CLIENT STORY",
-    title: "Reducing peak demand 23% through smart home technology partnerships",
+    title: "Saving a federal agency $140M annually through cloud-native modernization",
+    imageSrc: "/images/digital-health.jpg",
+  },
+  {
+    tag: "CLIENT STORY",
+    title: "Building a real-time analytics platform serving 12 million utility customers",
     imageSrc: "/images/utility-engagement.jpg",
   },
   {
     tag: "CLIENT STORY",
-    title: "Deploying an AI-enabled chatbot that resolved 2M+ citizen inquiries",
-    imageSrc: "/images/generative-ai.jpg",
-  },
-  {
-    tag: "CLIENT STORY",
-    title: "Geospatial wildfire response mapping that cut containment time by 40%",
-    imageSrc: "/images/disaster-response.jpg",
+    title: "Deploying an AI-driven threat detection system across 50 state networks",
+    imageSrc: "/images/analytics-dashboard.jpg",
   },
 ];
 
 const fallbackFeatured = {
-  tag: "FEATURED INSIGHT",
-  title: "The data center boom: navigating siting, permitting, and grid impact",
-  description: "As demand for computing capacity surges, communities and utilities face critical decisions. Our latest research explores how to accelerate data center development while protecting grid reliability and earning public trust.",
+  tag: "THOUGHT LEADERSHIP",
+  title: "The enterprise AI playbook: moving from experimentation to execution",
+  description: "Most organizations have run AI pilots. Few have scaled them. Our latest report examines the leadership, architecture, and governance patterns that separate AI leaders from the rest \u2014 across government, energy, and commercial sectors.",
   imageSrc: "/images/climate-infrastructure.jpg",
 };
 
@@ -127,7 +127,7 @@ export default async function Home() {
   // Fetch data from Sanity (falls back to hardcoded data if empty)
   let heroSlides = fallbackSlides;
   let stats = fallbackStats;
-  let bannerTitle = "See how agentic AI and advanced analytics are redefining what\u2019s possible in the public sector";
+  let bannerTitle = "Navigating complexity demands more than technology \u2014 it demands a partner who understands your mission";
   let bannerColor = "bg-emerald-400";
   let articles = fallbackArticles;
   let webinars = fallbackWebinars;
