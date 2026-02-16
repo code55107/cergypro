@@ -124,9 +124,9 @@ export default async function CapabilitiesPage() {
           tag="CAPABILITIES"
           title="Strategy to execution — technology that moves your mission forward"
           subtitle="Digital transformation, ServiceNow, AI, cloud, and cybersecurity capabilities — engineered for the organizations where getting it right matters most."
-          bgGradient="from-violet-950/40 via-black to-black"
+          bgGradient="from-slate-950/50 via-black to-black"
           bgImage="/images/capabilities-hero.jpg"
-          bgImageAlt="Close-up of a circuit board representing technology capabilities"
+          bgImageAlt="Modern glass high-rise buildings viewed from below against the sky"
         />
 
         {/* Capability Sections */}
