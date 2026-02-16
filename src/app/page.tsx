@@ -103,34 +103,19 @@ const fallbackWebinars = [
 
 const fallbackStories = [
   {
-    tag: "SERVICENOW · ITSM",
-    title: "Accenture consolidated 90+ business applications onto ServiceNow — connecting 2.25M users and cutting invoicing from 3 days to 3 minutes",
+    tag: "ASTRAZENECA · HEALTHCARE",
+    title: "AstraZeneca saves 30,000+ hours annually by replacing manual tasks with AI-powered automation — so researchers can focus on saving lives",
     imageSrc: "/images/digital-health.jpg",
   },
   {
-    tag: "SERVICENOW · AI",
-    title: "Deloitte cut search time by 40% and accelerated incident resolution by 45% with AI-powered ServiceNow automation",
+    tag: "SIEMENS · MANUFACTURING",
+    title: "Siemens saves 1 million hours through automation while resolving 210,000 tickets monthly without human intervention",
     imageSrc: "/images/utility-engagement.jpg",
   },
   {
-    tag: "SERVICENOW · ITSM",
-    title: "EY reduced service desk ticket volume by nearly 80% through AI-powered self-service on ServiceNow",
+    tag: "BELL CANADA · TELECOM",
+    title: "Bell Canada deflects 3 million customer support calls annually and automates 90% of dispatch tasks with ServiceNow",
     imageSrc: "/images/analytics-dashboard.jpg",
-  },
-  {
-    tag: "SERVICENOW · HRSD",
-    title: "Zoom unified HR and IT services for 8,000+ employees on a single ServiceNow self-service portal",
-    imageSrc: "/images/cloud-platform.jpg",
-  },
-  {
-    tag: "SERVICENOW · ITOM",
-    title: "Aston Martin F1 cut incident response by 4 hours — enabling trackside mobile IT support with ServiceNow",
-    imageSrc: "/images/innovation-summit.jpg",
-  },
-  {
-    tag: "SERVICENOW · CSM",
-    title: "Körber Supply Chain slashed mean time to resolution by 28% and Severity 1 response by 50% with ServiceNow CSM",
-    imageSrc: "/images/energy-grid.jpg",
   },
 ];
 
@@ -193,7 +178,7 @@ export default async function Home() {
     }
 
     if (sanityStories?.length > 0) {
-      stories = sanityStories.slice(0, 6).map((s: { tag: string; title: string; imageSrc: string }) => ({
+      stories = sanityStories.slice(0, 3).map((s: { tag: string; title: string; imageSrc: string }) => ({
         tag: s.tag,
         title: s.title,
         imageSrc: s.imageSrc,
@@ -396,9 +381,9 @@ export default async function Home() {
               linkText="Explore all"
               linkHref="/insights"
             />
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {stories.map((story, i) => (
-                <AnimateIn key={i} animation="fadeUp" delay={(i % 3) * 150}>
+                <AnimateIn key={i} animation="fadeUp" delay={i * 150}>
                   <ContentCard
                     tag={story.tag}
                     title={story.title}
