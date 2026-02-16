@@ -29,48 +29,105 @@ export const revalidate = 60;
 
 // Fallback data used when Sanity has no content yet
 const fallbackSlides: HeroSlide[] = [
-  { tag: "CUSTOMER ENGAGEMENT", title: "The most trusted\nutility platform\njust got better", subtitle: "Introducing the new Sightline\u00AE. Now responsibly powered with AI.", cta: "LEARN MORE", image: "/images/hero-1.jpg" },
-  { tag: "DATA CENTERS", title: "Powering the future\nof data center\ninfrastructure", subtitle: "End-to-end solutions for planning, designing, and optimizing data centers.", cta: "EXPLORE", image: "/images/hero-2.jpg" },
-  { tag: "DIGITAL PLATFORM", title: "Transform your\ncustomer experience\nwith AI", subtitle: "Our platform delivers personalized engagement at every touchpoint.", cta: "DISCOVER", image: "/images/hero-3.jpg" },
+  {
+    tag: "DATA CENTER SOLUTIONS",
+    title: "The race to build\ndata centers\nis on",
+    subtitle: "Accelerate development while safeguarding affordability, grid reliability, and community trust.",
+    cta: "EXPLORE SOLUTIONS",
+    image: "/images/hero-1.jpg",
+  },
+  {
+    tag: "AGENTIC AI",
+    title: "Deploy AI faster\nwith more flexibility\nand stronger security",
+    subtitle: "CergyPro Fathom\u2122 enables rapid, secure agentic AI deployment across your enterprise.",
+    cta: "LEARN MORE",
+    image: "/images/hero-2.jpg",
+  },
+  {
+    tag: "CUSTOMER PLATFORMS",
+    title: "The most trusted\nutility platform\njust got smarter",
+    subtitle: "Sightline\u00AE now responsibly powered with AI \u2014 delivering personalized engagement at scale.",
+    cta: "DISCOVER SIGHTLINE",
+    image: "/images/hero-3.jpg",
+  },
 ];
 
 const fallbackStats = [
   { value: "9,000+", label: "Employees worldwide" },
   { value: "70+", label: "Global office locations" },
-  { value: "$2B+", label: "Annual revenue" },
-  { value: "40+", label: "Years of experience" },
+  { value: "$2.1B", label: "Annual revenue (FY 2025)" },
+  { value: "45+", label: "Years of expertise" },
 ];
 
 const fallbackArticles = [
-  { tag: "ARTIFICIAL INTELLIGENCE", title: "Why responsible AI governance is the next competitive advantage", description: "Organizations that embed ethical AI frameworks early are seeing measurable returns in stakeholder trust.", imageSrc: "/images/ai-governance.jpg" },
-  { tag: "CLIMATE RESILIENCE", title: "Building adaptive infrastructure for a changing climate", description: "New approaches to infrastructure planning that account for extreme weather events and rising sea levels.", imageSrc: "/images/climate-infrastructure.jpg" },
-  { tag: "DIGITAL HEALTH", title: "Telehealth adoption trends reshaping federal health programs", description: "A look at how virtual care models are transforming access and outcomes across underserved communities.", imageSrc: "/images/digital-health.jpg" },
+  {
+    tag: "RESEARCH",
+    title: "Strategic site selection for the next generation of data centers",
+    description: "How utilities and developers can balance speed-to-market with grid impact, environmental review, and long-term community benefit.",
+    imageSrc: "/images/energy-grid.jpg",
+  },
+  {
+    tag: "ARTIFICIAL INTELLIGENCE",
+    title: "From pilot to production: rapid AI prototyping for government agencies",
+    description: "Why the agencies deploying AI fastest are the ones treating governance as a feature, not a gate.",
+    imageSrc: "/images/ai-governance.jpg",
+  },
+  {
+    tag: "ENERGY & ENVIRONMENT",
+    title: "State and local strategies for accelerating clean energy programs",
+    description: "Lessons from the jurisdictions cutting program launch times in half while doubling participation rates.",
+    imageSrc: "/images/distributed-energy.jpg",
+  },
 ];
 
 const fallbackWebinars = [
-  { tag: "WEBINAR", title: "The future of utility customer engagement in 2025", imageSrc: "/images/utility-engagement.jpg" },
-  { tag: "WEBINAR", title: "Navigating federal grant management with automation", imageSrc: "/images/grants-automation.jpg" },
-  { tag: "VIRTUAL EVENT", title: "CergyPro Innovation Summit: Responsible AI in Practice", imageSrc: "/images/innovation-summit.jpg" },
+  {
+    tag: "WEBINAR",
+    title: "CMS fraud prevention: leveraging analytics to protect program integrity",
+    imageSrc: "/images/analytics-dashboard.jpg",
+  },
+  {
+    tag: "WEBINAR",
+    title: "State energy strategy: aligning climate goals with ratepayer value",
+    imageSrc: "/images/ev-infrastructure.jpg",
+  },
+  {
+    tag: "VIRTUAL EVENT",
+    title: "CergyPro Innovation Summit: Building trust in the age of agentic AI",
+    imageSrc: "/images/innovation-summit.jpg",
+  },
 ];
 
 const fallbackStories = [
-  { tag: "CLIENT STORY", title: "Helping a state agency reduce disaster response time by 60%", imageSrc: "/images/disaster-response.jpg" },
-  { tag: "CLIENT STORY", title: "Deploying cloud-native platforms for a federal health system", imageSrc: "/images/cloud-platform.jpg" },
-  { tag: "CLIENT STORY", title: "Transforming transportation data into actionable intelligence", imageSrc: "/images/transportation-data.jpg" },
+  {
+    tag: "CLIENT STORY",
+    title: "Reducing peak demand 23% through smart home technology partnerships",
+    imageSrc: "/images/utility-engagement.jpg",
+  },
+  {
+    tag: "CLIENT STORY",
+    title: "Deploying an AI-enabled chatbot that resolved 2M+ citizen inquiries",
+    imageSrc: "/images/generative-ai.jpg",
+  },
+  {
+    tag: "CLIENT STORY",
+    title: "Geospatial wildfire response mapping that cut containment time by 40%",
+    imageSrc: "/images/disaster-response.jpg",
+  },
 ];
 
 const fallbackFeatured = {
-  tag: "CASE STUDY",
-  title: "Modernizing energy grid management for 12 million customers",
-  description: "See how we partnered with a major utility provider to deploy AI-driven demand forecasting, reducing outage response time by 40% and improving customer satisfaction scores.",
-  imageSrc: "/images/energy-grid.jpg",
+  tag: "FEATURED INSIGHT",
+  title: "The data center boom: navigating siting, permitting, and grid impact",
+  description: "As demand for computing capacity surges, communities and utilities face critical decisions. Our latest research explores how to accelerate data center development while protecting grid reliability and earning public trust.",
+  imageSrc: "/images/climate-infrastructure.jpg",
 };
 
 export default async function Home() {
   // Fetch data from Sanity (falls back to hardcoded data if empty)
   let heroSlides = fallbackSlides;
   let stats = fallbackStats;
-  let bannerTitle = "Discover how data analytics and AI are transforming public sector decision-making";
+  let bannerTitle = "See how agentic AI and advanced analytics are redefining what\u2019s possible in the public sector";
   let bannerColor = "bg-emerald-400";
   let articles = fallbackArticles;
   let webinars = fallbackWebinars;

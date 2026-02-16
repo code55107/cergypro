@@ -14,32 +14,32 @@ export interface HeroSlide {
 
 const defaultSlides: HeroSlide[] = [
   {
-    tag: "CUSTOMER ENGAGEMENT",
-    title: "The most trusted\nutility platform\njust got better",
+    tag: "DATA CENTER SOLUTIONS",
+    title: "The race to build\ndata centers\nis on",
     subtitle:
-      "Introducing the new Sightline\u00AE. Now responsibly powered with AI.",
-    cta: "LEARN MORE",
+      "Accelerate development while safeguarding affordability, grid reliability, and community trust.",
+    cta: "EXPLORE SOLUTIONS",
     image: "/images/hero-1.jpg",
   },
   {
-    tag: "DATA CENTERS",
-    title: "Powering the future\nof data center\ninfrastructure",
+    tag: "AGENTIC AI",
+    title: "Deploy AI faster\nwith more flexibility\nand stronger security",
     subtitle:
-      "End-to-end solutions for planning, designing, and optimizing data centers.",
-    cta: "EXPLORE",
+      "CergyPro Fathom\u2122 enables rapid, secure agentic AI deployment across your enterprise.",
+    cta: "LEARN MORE",
     image: "/images/hero-2.jpg",
   },
   {
-    tag: "DIGITAL PLATFORM",
-    title: "Transform your\ncustomer experience\nwith AI",
+    tag: "CUSTOMER PLATFORMS",
+    title: "The most trusted\nutility platform\njust got smarter",
     subtitle:
-      "Our platform delivers personalized engagement at every touchpoint.",
-    cta: "DISCOVER",
+      "Sightline\u00AE now responsibly powered with AI \u2014 delivering personalized engagement at scale.",
+    cta: "DISCOVER SIGHTLINE",
     image: "/images/hero-3.jpg",
   },
 ];
 
-const defaultTabLabels = ["Data Centers", "ICF Sightline", "ICF Platform"];
+const defaultTabLabels = ["Data Centers", "CergyPro Fathom", "Sightline"];
 
 interface HeroProps {
   slides?: HeroSlide[];
