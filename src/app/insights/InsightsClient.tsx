@@ -48,7 +48,7 @@ export default function InsightsClient({ articles, featured, categories }: Insig
           subtitle="Expert analysis, research, and thought leadership from across our practice areas."
           bgGradient="from-blue-950/40 via-black to-black"
           bgImage="/images/insights-hero.jpg"
-          bgImageAlt="Earth at night seen from space with city lights glowing"
+          bgImageAlt="Deep teal abstract ocean depths"
         />
 
         {/* Filters */}

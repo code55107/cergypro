@@ -87,7 +87,7 @@ export default async function CapabilitiesPage() {
           subtitle="From technology and consulting to creative services, we bring a full spectrum of capabilities to every engagement."
           bgGradient="from-violet-950/40 via-black to-black"
           bgImage="/images/capabilities-hero.jpg"
-          bgImageAlt="Modern open-plan workspace with teams collaborating"
+          bgImageAlt="Close-up of a circuit board representing technology capabilities"
         />
 
         {/* Capabilities Sections */}

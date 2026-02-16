@@ -106,7 +106,7 @@ export default async function AboutPage() {
           subtitle="For over four decades, we have partnered with governments, businesses, and communities to solve complex challenges and create lasting impact."
           bgGradient="from-emerald-950/30 via-black to-black"
           bgImage="/images/about-hero.jpg"
-          bgImageAlt="Team collaborating around a table with laptops"
+          bgImageAlt="Executive boardroom with panoramic windows overlooking the city"
         />
 
         {/* Stats */}

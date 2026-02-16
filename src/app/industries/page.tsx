@@ -60,7 +60,7 @@ export default async function IndustriesPage() {
           subtitle="We bring decades of domain knowledge, advanced analytics, and technology to help industries solve their most pressing challenges."
           bgGradient="from-cyan-950/40 via-black to-black"
           bgImage="/images/industries-hero.jpg"
-          bgImageAlt="Aerial view of a sprawling city skyline at sunset"
+          bgImageAlt="Modern office with architectural ceiling lighting and workspaces"
         />
 
         {/* Industries Grid */}

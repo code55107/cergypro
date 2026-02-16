@@ -58,7 +58,7 @@ export default async function ContactPage() {
           subtitle="Whether you have a specific challenge in mind or want to explore how we can work together, we are here to help."
           bgGradient="from-pink-950/30 via-black to-black"
           bgImage="/images/contact-hero.jpg"
-          bgImageAlt="Modern glass skyscrapers reaching toward the sky"
+          bgImageAlt="Sleek modern office corridor with glass partitions"
         />
 
         <section className="bg-white">
