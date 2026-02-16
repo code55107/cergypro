@@ -204,12 +204,28 @@ export default async function CapabilitiesPage() {
                 </div>
               </section>
 
-              {/* Highlight Banner after ServiceNow section */}
+              {/* Highlight Banners between sections */}
               {sectionIndex === 0 && (
                 <HighlightBanner
                   title="200+ ServiceNow implementations delivered across federal, defense, healthcare, and Fortune 500 clients"
                   href="/contact"
                   bgColor="bg-emerald-400"
+                  textColor="text-black"
+                />
+              )}
+              {sectionIndex === 1 && (
+                <HighlightBanner
+                  title="50+ production AI systems deployed across government and enterprise — turning data into decisions"
+                  href="/insights"
+                  bgColor="bg-cyan-400"
+                  textColor="text-black"
+                />
+              )}
+              {sectionIndex === 3 && (
+                <HighlightBanner
+                  title="Protecting the networks that protect the nation — FedRAMP, CMMC, and zero trust at scale"
+                  href="/industries"
+                  bgColor="bg-amber-400"
                   textColor="text-black"
                 />
               )}
