@@ -252,7 +252,7 @@ export default async function CapabilitiesPage() {
                 </p>
                 <div className="flex items-center gap-6 text-sm">
                   <div className="text-center">
-                    <span className="block text-2xl font-light text-white">7</span>
+                    <span className="block text-2xl font-light text-white">8</span>
                     <span className="text-gray-500 text-xs uppercase tracking-wider">Partners</span>
                   </div>
                   <div className="w-px h-8 bg-gray-700" />
@@ -279,6 +279,7 @@ export default async function CapabilitiesPage() {
                     { name: "Zendesk", logo: "/images/partners/zendesk.svg", color: "#03363D", desc: "CX Partner" },
                     { name: "Salesforce", logo: "/images/partners/salesforce.svg", color: "#00A1E0", desc: "Summit Partner" },
                     { name: "Ingram Micro", logo: "/images/partners/ingrammicro.svg", color: "#0073CF", desc: "Distribution Partner" },
+                    { name: "Cisco", logo: "/images/partners/cisco.svg", color: "#049FD9", desc: "Network Partner" },
                   ].map((partner, i) => (
                     <AnimateIn key={partner.name} animation="scaleUp" delay={i * 80}>
                       <div
