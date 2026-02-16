@@ -25,16 +25,16 @@ export const revalidate = 60;
 const fallbackCapabilities = [
   {
     category: "SERVICENOW CONSULTING",
-    headline: "The ServiceNow expertise enterprises count on",
-    description: "Our largest and fastest-growing practice. We deliver end-to-end ServiceNow solutions across ITSM, ITOM, SecOps, HR, and CSM — helping government and enterprise clients consolidate tools, automate workflows, and accelerate service delivery.",
+    headline: "The enterprise workflow platform — implemented right",
+    description: "Our largest and fastest-growing practice. We deliver end-to-end ServiceNow solutions across every workflow domain — helping federal, healthcare, financial services, and Fortune 500 clients consolidate platforms, automate enterprise workflows, and unlock AI-powered service delivery with Now Assist.",
     image: "/images/cap-servicenow.jpg",
     items: [
-      { name: "ITSM Implementation & Optimization", description: "Full-lifecycle ServiceNow ITSM deployments — from greenfield implementations to platform consolidation and performance optimization." },
-      { name: "ITOM & Discovery", description: "Event management, service mapping, and discovery for complete infrastructure visibility." },
-      { name: "Security Operations (SecOps)", description: "Unified threat intelligence, vulnerability response, and incident management on the ServiceNow platform." },
-      { name: "HR Service Delivery & CSM", description: "Employee experience and customer service transformation with self-service portals." },
-      { name: "Platform Development", description: "Custom apps, integrations, and workflow automation via Flow Designer, IntegrationHub, and App Engine." },
-      { name: "Managed Services & Support", description: "Ongoing administration, upgrades, and optimization to maximize platform ROI." },
+      { name: "IT Workflows", description: "ITSM, ITOM, ITAM, and CMDB/CSDM — from greenfield deployments to legacy platform migration and AIOps-driven operations management." },
+      { name: "Employee Workflows", description: "HR Service Delivery, workplace services, and onboarding automation — transforming the employee experience with self-service portals and case management." },
+      { name: "Customer Workflows", description: "Customer Service Management (CSM), Field Service Management, and omnichannel engagement — unifying customer operations on a single platform." },
+      { name: "Security & Risk", description: "SecOps, vulnerability response, GRC, and integrated risk management — aligning security workflows with enterprise compliance requirements." },
+      { name: "Creator & AI", description: "App Engine, Flow Designer, Integration Hub, and Now Assist — low-code development, workflow automation, and generative AI across the Now Platform." },
+      { name: "Managed Services & Optimization", description: "Ongoing platform administration, upgrades, CoE-as-a-Service, and continuous improvement to maximize ServiceNow ROI." },
     ],
   },
   {
