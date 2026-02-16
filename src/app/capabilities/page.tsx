@@ -24,9 +24,23 @@ export const revalidate = 60;
 
 const fallbackCapabilities = [
   {
+    category: "DIGITAL TRANSFORMATION",
+    headline: "Accelerate change. Architect what\u2019s next.",
+    description: "From strategy through execution, we help organizations reimagine how they operate, serve customers, and compete. We combine IT strategy, enterprise platforms, intelligent automation, and human-centered design to deliver transformation programs with measurable business outcomes.",
+    image: "/images/cap-digital.jpg",
+    items: [
+      { name: "IT Strategy & Roadmapping", description: "Architecture planning and multi-year transformation roadmaps aligned to business outcomes." },
+      { name: "Enterprise Platform Strategy", description: "Platform selection, consolidation, and optimization across ServiceNow, Salesforce, and cloud-native ecosystems." },
+      { name: "Process Automation & RPA", description: "Intelligent automation that reduces costs and accelerates service delivery across the enterprise." },
+      { name: "User Experience & Design", description: "Human-centered design for digital products, portals, and citizen-facing services." },
+      { name: "Change Management & Adoption", description: "Organizational readiness, training programs, and adoption strategies that ensure transformation sticks." },
+      { name: "Digital Operating Models", description: "Redesigning how organizations operate — from agile delivery to product-centric IT and shared services." },
+    ],
+  },
+  {
     category: "SERVICENOW CONSULTING",
-    headline: "The enterprise workflow platform — implemented right",
-    description: "Our largest and fastest-growing practice. We deliver end-to-end ServiceNow solutions across every workflow domain — helping federal, healthcare, financial services, and Fortune 500 clients consolidate platforms, automate enterprise workflows, and unlock AI-powered service delivery with Now Assist.",
+    headline: "Enterprise workflows, unified and automated",
+    description: "We deliver end-to-end ServiceNow solutions across every workflow domain — helping federal, healthcare, financial services, and Fortune 500 clients consolidate platforms, automate enterprise operations, and unlock AI-powered service delivery with Now Assist.",
     image: "/images/cap-servicenow.jpg",
     items: [
       { name: "IT Workflows", description: "ITSM, ITOM, ITAM, and CMDB/CSDM — from greenfield deployments to legacy platform migration and AIOps-driven operations management." },
@@ -73,18 +87,6 @@ const fallbackCapabilities = [
       { name: "Compliance & Risk Management", description: "Continuous monitoring for HIPAA, PCI-DSS, and federal regulatory mandates." },
     ],
   },
-  {
-    category: "DIGITAL TRANSFORMATION",
-    headline: "Architecting transformation that delivers",
-    description: "IT strategy, CRM platforms, intelligent automation, and human-centered design — we build transformation programs that deliver measurable business outcomes.",
-    image: "/images/cap-digital.jpg",
-    items: [
-      { name: "IT Strategy & Roadmapping", description: "Architecture planning and multi-year transformation roadmaps aligned to business outcomes." },
-      { name: "Customer Platforms & CRM", description: "Salesforce deployments and proprietary platforms including Sightline\u00AE for utility engagement." },
-      { name: "Process Automation & RPA", description: "Intelligent automation that reduces costs and accelerates service delivery." },
-      { name: "User Experience & Design", description: "Human-centered design for digital products, portals, and citizen-facing services." },
-    ],
-  },
 ];
 
 export default async function CapabilitiesPage() {
@@ -120,8 +122,8 @@ export default async function CapabilitiesPage() {
       <main>
         <PageHero
           tag="CAPABILITIES"
-          title="End-to-end technology capabilities built for mission-critical work"
-          subtitle="From AI and cloud to cybersecurity and digital transformation — we engineer solutions that scale, secure, and deliver measurable outcomes."
+          title="Strategy to execution — technology that moves your mission forward"
+          subtitle="Digital transformation, ServiceNow, AI, cloud, and cybersecurity capabilities — engineered for the organizations where getting it right matters most."
           bgGradient="from-violet-950/40 via-black to-black"
           bgImage="/images/capabilities-hero.jpg"
           bgImageAlt="Close-up of a circuit board representing technology capabilities"
@@ -207,16 +209,16 @@ export default async function CapabilitiesPage() {
               {/* Highlight Banners between sections */}
               {sectionIndex === 0 && (
                 <HighlightBanner
-                  title="200+ ServiceNow implementations delivered across federal, defense, healthcare, and Fortune 500 clients"
-                  href="/contact"
+                  title="Driving enterprise-wide transformation across federal, healthcare, financial services, and Fortune 500 clients"
+                  href="/industries"
                   bgColor="bg-emerald-400"
                   textColor="text-black"
                 />
               )}
               {sectionIndex === 1 && (
                 <HighlightBanner
-                  title="50+ production AI systems deployed across government and enterprise — turning data into decisions"
-                  href="/insights"
+                  title="200+ ServiceNow implementations delivered — our flagship platform specialization"
+                  href="/contact"
                   bgColor="bg-cyan-400"
                   textColor="text-black"
                 />
