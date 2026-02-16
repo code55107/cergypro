@@ -29,8 +29,9 @@ const fallbackTimeline = [
   { year: "2001", event: "Grew cybersecurity practice in response to post-9/11 federal demand for information assurance." },
   { year: "2008", event: "Entered the energy and utilities market, building customer information systems for top-tier utilities." },
   { year: "2015", event: "Acquired advanced analytics firms, establishing a dedicated AI and data science practice." },
+  { year: "2018", event: "Launched ServiceNow consulting practice, rapidly growing to become the firm\u2019s largest service line with ITSM, ITOM, SecOps, and HR capabilities." },
   { year: "2021", event: "Launched Sightline\u00AE, the industry\u2019s most comprehensive utility customer engagement platform." },
-  { year: "2024", event: "Surpassed $2B in annual revenue and 9,000 employees worldwide, with AI capabilities embedded across all service lines." },
+  { year: "2024", event: "Surpassed $2B in annual revenue and 9,000 employees worldwide, with ServiceNow and AI capabilities embedded across all service lines." },
 ];
 
 const fallbackLeaders = [
@@ -129,7 +130,7 @@ export default async function AboutPage() {
                     We turn complex technology challenges into operational advantages
                   </h2>
                   <p className="text-gray-600 leading-relaxed mb-4">
-                    CergyPro is a global technology consulting firm with more than 9,000 professionals delivering AI, advanced analytics, cybersecurity, and digital transformation solutions. We combine deep domain expertise with enterprise-grade engineering to help organizations operate smarter, faster, and more securely.
+                    CergyPro is a global technology consulting firm with more than 9,000 professionals delivering ServiceNow consulting, AI, advanced analytics, cybersecurity, and digital transformation solutions. We combine deep domain expertise with enterprise-grade engineering to help organizations operate smarter, faster, and more securely.
                   </p>
                   <p className="text-gray-600 leading-relaxed">
                     From modernizing federal agency systems and building zero-trust security architectures to deploying AI-powered utility platforms serving millions of customers, our work drives measurable outcomes for some of the most demanding organizations in the world.

@@ -8,7 +8,7 @@ import Link from "next/link";
 import { getCapabilities } from "@/lib/sanity";
 
 export const metadata: Metadata = {
-  title: "Capabilities — AI, Cloud, Cybersecurity & Digital Transformation | CergyPro",
+  title: "Capabilities — ServiceNow, AI, Cloud, Cybersecurity & Digital Transformation | CergyPro",
   description:
     "CergyPro delivers enterprise AI, cloud modernization, cybersecurity, data analytics, and digital transformation solutions for government and commercial clients.",
   openGraph: {
@@ -22,6 +22,17 @@ export const metadata: Metadata = {
 export const revalidate = 60;
 
 const fallbackCapabilities = [
+  {
+    category: "SERVICENOW CONSULTING",
+    items: [
+      { name: "ITSM Implementation & Optimization", description: "Full-lifecycle ServiceNow ITSM deployments \u2014 from greenfield implementations to platform consolidation and performance optimization for enterprise and government clients." },
+      { name: "ITOM & Discovery", description: "ServiceNow IT Operations Management including event management, service mapping, and discovery to give organizations complete visibility into their infrastructure." },
+      { name: "Security Operations (SecOps)", description: "Integrate threat intelligence, vulnerability response, and incident management into a unified SecOps workflow on the ServiceNow platform." },
+      { name: "HR Service Delivery & CSM", description: "Transform employee experiences and customer service operations with ServiceNow HR Service Delivery, CSM, and self-service portals." },
+      { name: "ServiceNow Platform Development", description: "Custom application development, integrations, and workflow automation on the Now Platform \u2014 leveraging Flow Designer, IntegrationHub, and App Engine." },
+      { name: "Managed Services & Support", description: "Ongoing ServiceNow administration, upgrades, and optimization to maximize platform ROI and ensure continuous improvement." },
+    ],
+  },
   {
     category: "AI & DATA",
     items: [
@@ -53,7 +64,7 @@ const fallbackCapabilities = [
     category: "DIGITAL TRANSFORMATION",
     items: [
       { name: "IT Strategy & Roadmapping", description: "Align technology investments with business outcomes through assessment, architecture planning, and multi-year transformation roadmaps." },
-      { name: "Customer Platforms & CRM", description: "Deploy and customize Salesforce, ServiceNow, and proprietary platforms — including Sightline\u00AE for utility customer engagement." },
+      { name: "Customer Platforms & CRM", description: "Deploy and customize Salesforce and proprietary platforms \u2014 including Sightline\u00AE for utility customer engagement and enterprise CRM solutions." },
       { name: "Process Automation & RPA", description: "Automate high-volume, repetitive processes with intelligent automation, reducing costs and accelerating service delivery." },
       { name: "User Experience & Design", description: "Human-centered design for digital products, portals, and citizen-facing services that drive adoption and satisfaction." },
     ],
@@ -154,7 +165,7 @@ export default async function CapabilitiesPage() {
               </p>
             </AnimateIn>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {["AWS", "Microsoft Azure", "Google Cloud", "Salesforce", "ServiceNow", "Palo Alto Networks", "Snowflake", "Databricks"].map((partner, i) => (
+              {["AWS", "Microsoft Azure", "Google Cloud", "Salesforce", "Palo Alto Networks", "Snowflake", "Databricks", "Splunk"].map((partner, i) => (
                 <AnimateIn key={partner} animation="scaleUp" delay={i * 80}>
                   <div className="bg-gray-50 rounded-sm py-8 px-6 flex items-center justify-center hover:bg-gray-100 transition-colors">
                     <span className="text-gray-500 text-sm font-medium">{partner}</span>

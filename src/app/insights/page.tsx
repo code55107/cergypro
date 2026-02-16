@@ -20,8 +20,8 @@ const fallbackArticles = [
   { tag: "ARTIFICIAL INTELLIGENCE", title: "From pilot to production: why AI governance is a feature, not a gate", description: "The agencies and enterprises deploying AI fastest are embedding responsible governance from day one. Here\u2019s what they\u2019re doing differently.", imageSrc: "/images/ai-governance.jpg", category: "AI & Data" },
   { tag: "CYBERSECURITY", title: "Zero trust in practice: lessons from the federal frontline", description: "How three agencies moved beyond frameworks to fully operational zero-trust architectures \u2014 and the pitfalls they avoided.", imageSrc: "/images/cybersecurity-policy.jpg", category: "Cybersecurity" },
   { tag: "ENERGY & UTILITIES", title: "Grid modernization: balancing reliability with the clean energy transition", description: "Utilities face a dual mandate \u2014 decarbonize while keeping the lights on. New approaches to grid planning are making both possible.", imageSrc: "/images/distributed-energy.jpg", category: "Energy" },
-  { tag: "CLOUD", title: "Cloud migration at scale: avoiding the most expensive mistakes", description: "The difference between a successful cloud migration and a costly one often comes down to architecture decisions made in the first 90 days.", imageSrc: "/images/cloud-platform.jpg", category: "Cloud & Infrastructure" },
-  { tag: "GOVERNMENT", title: "Federal IT modernization: moving beyond lift-and-shift", description: "True modernization means rethinking how agencies deliver services \u2014 not just moving legacy code to new servers.", imageSrc: "/images/grants-automation.jpg", category: "Government" },
+  { tag: "SERVICENOW", title: "Why ServiceNow implementations fail \u2014 and how to get them right", description: "The difference between a transformative ServiceNow rollout and costly shelf-ware comes down to three architecture decisions most teams overlook.", imageSrc: "/images/cloud-platform.jpg", category: "ServiceNow" },
+  { tag: "SERVICENOW", title: "ServiceNow SecOps: unifying vulnerability and incident response on one platform", description: "Organizations running security operations across multiple tools are consolidating onto ServiceNow SecOps \u2014 and seeing 40% faster mean-time-to-resolve.", imageSrc: "/images/grants-automation.jpg", category: "ServiceNow" },
   { tag: "AI & DATA", title: "Building enterprise data platforms that actually get used", description: "Most data platform investments underdeliver because they solve for technology, not for the analysts and operators who need the data.", imageSrc: "/images/analytics-dashboard.jpg", category: "AI & Data" },
   { tag: "CYBERSECURITY", title: "The CMMC compliance roadmap: what defense contractors need to know", description: "A practical guide to achieving Cybersecurity Maturity Model Certification without stalling your business operations.", imageSrc: "/images/climate-infrastructure.jpg", category: "Cybersecurity" },
   { tag: "ENERGY", title: "AI-powered demand forecasting is transforming utility operations", description: "Utilities deploying machine learning for load prediction are seeing 15\u201320% improvements in operational efficiency and grid reliability.", imageSrc: "/images/energy-grid.jpg", category: "Energy" },
@@ -35,7 +35,7 @@ const fallbackFeatured = {
   imageSrc: "/images/generative-ai.jpg",
 };
 
-const fallbackCategories = ["AI & Data", "Cybersecurity", "Cloud & Infrastructure", "Energy", "Government"];
+const fallbackCategories = ["ServiceNow", "AI & Data", "Cybersecurity", "Cloud & Infrastructure", "Energy", "Government"];
 
 export default async function InsightsPage() {
   let articles = fallbackArticles;

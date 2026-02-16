@@ -17,13 +17,14 @@ export const metadata: Metadata = {
 export const revalidate = 60;
 
 const fallbackJobs = [
+  { title: "Senior ServiceNow Developer", location: "Reston, VA", department: "ServiceNow Consulting", type: "Full-time", id: "JR-2025-2115", posted: "1 day ago" },
+  { title: "ServiceNow Solutions Architect", location: "Remote - US", department: "ServiceNow Consulting", type: "Full-time", id: "JR-2025-2108", posted: "2 days ago" },
+  { title: "ServiceNow ITOM Consultant", location: "Washington, DC", department: "ServiceNow Consulting", type: "Full-time", id: "JR-2025-2104", posted: "2 days ago" },
   { title: "Senior Machine Learning Engineer", location: "Reston, VA", department: "AI & Analytics", type: "Full-time", id: "JR-2025-2103", posted: "2 days ago" },
   { title: "Cloud Solutions Architect — AWS", location: "Remote - US", department: "Cloud & Infrastructure", type: "Full-time", id: "JR-2025-2091", posted: "3 days ago" },
   { title: "Zero Trust Security Engineer", location: "Washington, DC", department: "Cybersecurity", type: "Full-time", id: "JR-2025-2087", posted: "3 days ago" },
-  { title: "Senior Data Engineer", location: "Arlington, VA", department: "AI & Analytics", type: "Full-time", id: "JR-2025-2074", posted: "5 days ago" },
   { title: "Full Stack Developer — React/Node", location: "Remote - US", department: "Application Development", type: "Full-time", id: "JR-2025-2068", posted: "1 week ago" },
   { title: "DevSecOps Engineer", location: "Reston, VA", department: "Cloud & Infrastructure", type: "Full-time", id: "JR-2025-2055", posted: "1 week ago" },
-  { title: "Utility Platform Analyst — Sightline", location: "Atlanta, GA", department: "Energy & Utilities", type: "Full-time", id: "JR-2025-2041", posted: "2 weeks ago" },
   { title: "Federal IT Program Manager", location: "Washington, DC", department: "Government Services", type: "Full-time", id: "JR-2025-2033", posted: "2 weeks ago" },
 ];
 

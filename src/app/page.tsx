@@ -37,10 +37,10 @@ const fallbackSlides: HeroSlide[] = [
     image: "/images/hero-1.jpg",
   },
   {
-    tag: "CUSTOMER PLATFORMS",
-    title: "The most trusted\nutility platform\njust got smarter",
-    subtitle: "Sightline\u00AE now responsibly powered with AI \u2014 delivering personalized customer engagement at scale.",
-    cta: "DISCOVER SIGHTLINE",
+    tag: "SERVICENOW CONSULTING",
+    title: "The ServiceNow\nexpertise enterprises\ncount on",
+    subtitle: "End-to-end ServiceNow implementation, optimization, and managed services \u2014 ITSM, ITOM, SecOps, HR, and CSM across government and enterprise.",
+    cta: "EXPLORE SERVICENOW",
     image: "/images/hero-2.jpg",
   },
   {
@@ -73,9 +73,9 @@ const fallbackArticles = [
     imageSrc: "/images/cybersecurity-policy.jpg",
   },
   {
-    tag: "ENERGY & UTILITIES",
-    title: "Grid modernization: balancing reliability with the clean energy transition",
-    description: "Utilities face a dual mandate \u2014 decarbonize while keeping the lights on. New approaches to grid planning are making both possible.",
+    tag: "SERVICENOW",
+    title: "Why ServiceNow implementations fail \u2014 and how to get them right",
+    description: "The difference between a transformative ServiceNow rollout and a costly shelf-ware project comes down to three architecture decisions most teams overlook.",
     imageSrc: "/images/distributed-energy.jpg",
   },
 ];
@@ -88,7 +88,7 @@ const fallbackWebinars = [
   },
   {
     tag: "WEBINAR",
-    title: "Modernizing legacy systems without disrupting operations",
+    title: "ServiceNow ITSM at scale: lessons from enterprise and federal deployments",
     imageSrc: "/images/cloud-platform.jpg",
   },
   {
@@ -106,7 +106,7 @@ const fallbackStories = [
   },
   {
     tag: "CLIENT STORY",
-    title: "Building a real-time analytics platform serving 12 million utility customers",
+    title: "Consolidating 14 ITSM tools into one ServiceNow platform \u2014 cutting resolution times by 65%",
     imageSrc: "/images/utility-engagement.jpg",
   },
   {

@@ -23,12 +23,12 @@ export const metadata: Metadata = {
 export const revalidate = 60;
 
 const fallbackIndustries = [
-  { name: "Federal Civilian", description: "Modernizing federal agencies with cloud migration, AI-driven automation, and zero-trust cybersecurity architectures that accelerate mission delivery.", image: "/images/industry-federal.jpg" },
+  { name: "Federal Civilian", description: "Modernizing federal agencies with ServiceNow ITSM, cloud migration, AI-driven automation, and zero-trust cybersecurity architectures that accelerate mission delivery.", image: "/images/industry-federal.jpg" },
   { name: "Defense & Intelligence", description: "Delivering secure, mission-critical systems for defense and intelligence communities — from advanced analytics to enterprise IT modernization.", image: "/images/industry-aviation.jpg" },
   { name: "State & Local Government", description: "Helping state and local agencies digitize citizen services, modernize legacy systems, and implement data-driven decision-making.", image: "/images/industry-social.jpg" },
   { name: "Energy & Utilities", description: "Powering the energy transition with grid modernization, customer engagement platforms, and AI-optimized operations for utilities nationwide.", image: "/images/industry-energy.jpg" },
-  { name: "Healthcare", description: "Transforming healthcare delivery through interoperability solutions, clinical data analytics, and secure health information exchanges.", image: "/images/industry-health.jpg" },
-  { name: "Commercial Enterprise", description: "Partnering with Fortune 500 companies on digital transformation, AI strategy, cybersecurity, and cloud-native application development.", image: "/images/industry-transport.jpg" },
+  { name: "Healthcare", description: "Transforming healthcare delivery through ServiceNow HR and CSM workflows, interoperability solutions, clinical data analytics, and secure health information exchanges.", image: "/images/industry-health.jpg" },
+  { name: "Commercial Enterprise", description: "Partnering with Fortune 500 companies on ServiceNow enterprise deployments, digital transformation, AI strategy, and cloud-native development.", image: "/images/industry-transport.jpg" },
   { name: "Financial Services", description: "Enabling financial institutions to accelerate digital banking, strengthen regulatory compliance, and deploy AI-powered risk analytics.", image: "/images/industry-climate.jpg" },
   { name: "Transportation & Infrastructure", description: "Advancing intelligent transportation systems, infrastructure resilience, and smart mobility solutions through data and technology.", image: "/images/industry-disaster.jpg" },
   { name: "Environmental & Sustainability", description: "Supporting environmental compliance, climate analytics, and sustainability programs with advanced modeling and data science.", image: "/images/industry-environment.jpg" },

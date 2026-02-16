@@ -22,11 +22,11 @@ const defaultSlides: HeroSlide[] = [
     image: "/images/hero-1.jpg",
   },
   {
-    tag: "CUSTOMER PLATFORMS",
-    title: "The most trusted\nutility platform\njust got smarter",
+    tag: "SERVICENOW CONSULTING",
+    title: "The ServiceNow\nexpertise enterprises\ncount on",
     subtitle:
-      "Sightline\u00AE now responsibly powered with AI \u2014 delivering personalized customer engagement at scale.",
-    cta: "DISCOVER SIGHTLINE",
+      "End-to-end ServiceNow implementation, optimization, and managed services \u2014 ITSM, ITOM, SecOps, HR, and CSM across government and enterprise.",
+    cta: "EXPLORE SERVICENOW",
     image: "/images/hero-2.jpg",
   },
   {
@@ -39,7 +39,7 @@ const defaultSlides: HeroSlide[] = [
   },
 ];
 
-const defaultTabLabels = ["AI & Analytics", "Sightline", "Government"];
+const defaultTabLabels = ["AI & Analytics", "ServiceNow", "Government"];
 
 interface HeroProps {
   slides?: HeroSlide[];
