@@ -3,12 +3,14 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 import MagneticButton from "./MagneticButton";
 import Image from "next/image";
+import Link from "next/link";
 
 export interface HeroSlide {
   tag: string;
   title: string;
   subtitle: string;
   cta: string;
+  href: string;
   image: string;
 }
 
@@ -19,6 +21,7 @@ const defaultSlides: HeroSlide[] = [
     subtitle:
       "Enterprise-grade AI and advanced analytics that help organizations make faster, smarter decisions at scale.",
     cta: "EXPLORE AI SOLUTIONS",
+    href: "/capabilities#ai-data",
     image: "/images/hero-1.jpg",
   },
   {
@@ -27,6 +30,7 @@ const defaultSlides: HeroSlide[] = [
     subtitle:
       "End-to-end ServiceNow implementation, optimization, and managed services \u2014 ITSM, ITOM, SecOps, HR, and CSM across government and enterprise.",
     cta: "EXPLORE SERVICENOW",
+    href: "/capabilities#servicenow-consulting",
     image: "/images/hero-2.jpg",
   },
   {
@@ -35,6 +39,7 @@ const defaultSlides: HeroSlide[] = [
     subtitle:
       "Helping federal, state, and local agencies accelerate digital transformation while strengthening security.",
     cta: "SEE OUR WORK",
+    href: "/industries",
     image: "/images/hero-3.jpg",
   },
 ];
@@ -164,12 +169,15 @@ export default function Hero({ slides: propSlides, tabLabels: propTabLabels }: H
             }}
           >
             <MagneticButton strength={0.15}>
-              <button className="btn-shine inline-flex items-center gap-2 px-8 py-3 border border-white/30 text-white text-sm font-semibold tracking-wider uppercase hover:bg-white hover:text-black transition-all duration-300">
+              <Link
+                href={slide.href}
+                className="btn-shine inline-flex items-center gap-2 px-8 py-3 border border-white/30 text-white text-sm font-semibold tracking-wider uppercase hover:bg-white hover:text-black transition-all duration-300"
+              >
                 {slide.cta}
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
-              </button>
+              </Link>
             </MagneticButton>
           </div>
         </div>

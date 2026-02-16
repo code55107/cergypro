@@ -113,7 +113,8 @@ export default async function CapabilitiesPage() {
         {capabilities.map((section) => (
           <section
             key={section.category}
-            className="bg-white"
+            id={section.category.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")}
+            className="bg-white scroll-mt-20"
           >
             <div className="max-w-[1400px] mx-auto px-6 py-20">
               <AnimateIn animation="fadeUp">

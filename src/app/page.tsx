@@ -34,6 +34,7 @@ const fallbackSlides: HeroSlide[] = [
     title: "Turning complexity\ninto clarity",
     subtitle: "Enterprise-grade AI and advanced analytics that help organizations make faster, smarter decisions at scale.",
     cta: "EXPLORE AI SOLUTIONS",
+    href: "/capabilities#ai-data",
     image: "/images/hero-1.jpg",
   },
   {
@@ -41,6 +42,7 @@ const fallbackSlides: HeroSlide[] = [
     title: "The ServiceNow\nexpertise enterprises\ncount on",
     subtitle: "End-to-end ServiceNow implementation, optimization, and managed services \u2014 ITSM, ITOM, SecOps, HR, and CSM across government and enterprise.",
     cta: "EXPLORE SERVICENOW",
+    href: "/capabilities#servicenow-consulting",
     image: "/images/hero-2.jpg",
   },
   {
@@ -48,6 +50,7 @@ const fallbackSlides: HeroSlide[] = [
     title: "Modernizing the\nmissions that matter\nmost",
     subtitle: "Helping federal, state, and local agencies accelerate digital transformation while strengthening security.",
     cta: "SEE OUR WORK",
+    href: "/industries",
     image: "/images/hero-3.jpg",
   },
 ];
@@ -144,11 +147,12 @@ export default async function Home() {
     ]);
 
     if (settings?.heroSlides?.length > 0) {
-      heroSlides = settings.heroSlides.map((s: { tag: string; title: string; subtitle: string; cta: string; image: string }) => ({
+      heroSlides = settings.heroSlides.map((s: { tag: string; title: string; subtitle: string; cta: string; href?: string; image: string }) => ({
         tag: s.tag,
         title: s.title,
         subtitle: s.subtitle,
         cta: s.cta,
+        href: s.href || "/capabilities",
         image: s.image,
       }));
     }
