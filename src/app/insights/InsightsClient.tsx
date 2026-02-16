@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 import AnimateIn from "@/components/AnimateIn";
 
 interface Article {
+  slug: string;
   tag: string;
   title: string;
   description: string;
@@ -17,6 +18,7 @@ interface Article {
 }
 
 interface FeaturedArticle {
+  slug: string;
   tag: string;
   title: string;
   description: string;
@@ -79,7 +81,7 @@ export default function InsightsClient({ articles, featured, categories }: Insig
                 title={featured.title}
                 description={featured.description}
                 imageSrc={featured.imageSrc}
-                href="/insights"
+                href={`/insights/${featured.slug}`}
               />
             </AnimateIn>
           </div>
@@ -96,7 +98,7 @@ export default function InsightsClient({ articles, featured, categories }: Insig
                     title={article.title}
                     description={article.description}
                     imageSrc={article.imageSrc}
-                    href="/insights"
+                    href={`/insights/${article.slug}`}
                   />
                 </AnimateIn>
               ))}
