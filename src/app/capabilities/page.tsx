@@ -3,7 +3,6 @@ import Header from "@/components/Header";
 import PageHero from "@/components/PageHero";
 import Footer from "@/components/Footer";
 import AnimateIn from "@/components/AnimateIn";
-import GlowCard from "@/components/GlowCard";
 import HighlightBanner from "@/components/HighlightBanner";
 import Link from "next/link";
 import Image from "next/image";
@@ -26,81 +25,67 @@ export const revalidate = 60;
 const fallbackCapabilities = [
   {
     category: "SERVICENOW CONSULTING",
+    headline: "The ServiceNow expertise enterprises count on",
     description: "Our largest and fastest-growing practice. We deliver end-to-end ServiceNow solutions across ITSM, ITOM, SecOps, HR, and CSM — helping government and enterprise clients consolidate tools, automate workflows, and accelerate service delivery.",
-    image: "/images/cloud-platform.jpg",
+    image: "/images/cap-servicenow.jpg",
     items: [
-      { name: "ITSM Implementation & Optimization", description: "Full-lifecycle ServiceNow ITSM deployments \u2014 from greenfield implementations to platform consolidation and performance optimization for enterprise and government clients.", image: "/images/analytics-dashboard.jpg" },
-      { name: "ITOM & Discovery", description: "ServiceNow IT Operations Management including event management, service mapping, and discovery to give organizations complete visibility into their infrastructure.", image: "/images/energy-grid.jpg" },
-      { name: "Security Operations (SecOps)", description: "Integrate threat intelligence, vulnerability response, and incident management into a unified SecOps workflow on the ServiceNow platform.", image: "/images/cybersecurity-policy.jpg" },
-      { name: "HR Service Delivery & CSM", description: "Transform employee experiences and customer service operations with ServiceNow HR Service Delivery, CSM, and self-service portals.", image: "/images/team-collaboration.jpg" },
-      { name: "ServiceNow Platform Development", description: "Custom application development, integrations, and workflow automation on the Now Platform \u2014 leveraging Flow Designer, IntegrationHub, and App Engine.", image: "/images/generative-ai.jpg" },
-      { name: "Managed Services & Support", description: "Ongoing ServiceNow administration, upgrades, and optimization to maximize platform ROI and ensure continuous improvement.", image: "/images/grants-automation.jpg" },
+      { name: "ITSM Implementation & Optimization", description: "Full-lifecycle ServiceNow ITSM deployments — from greenfield implementations to platform consolidation and performance optimization." },
+      { name: "ITOM & Discovery", description: "Event management, service mapping, and discovery for complete infrastructure visibility." },
+      { name: "Security Operations (SecOps)", description: "Unified threat intelligence, vulnerability response, and incident management on the ServiceNow platform." },
+      { name: "HR Service Delivery & CSM", description: "Employee experience and customer service transformation with self-service portals." },
+      { name: "Platform Development", description: "Custom apps, integrations, and workflow automation via Flow Designer, IntegrationHub, and App Engine." },
+      { name: "Managed Services & Support", description: "Ongoing administration, upgrades, and optimization to maximize platform ROI." },
     ],
   },
   {
     category: "AI & DATA",
-    description: "From predictive analytics to generative AI, we build production-grade AI solutions with responsible governance \u2014 helping organizations unlock the full value of their data.",
-    image: "/images/generative-ai.jpg",
+    headline: "Turning complexity into clarity with AI",
+    description: "From predictive analytics to generative AI, we build production-grade solutions with responsible governance — helping organizations unlock the full value of their data.",
+    image: "/images/cap-ai.jpg",
     items: [
-      { name: "Enterprise AI & Machine Learning", description: "Production-grade AI solutions \u2014 from predictive analytics and NLP to computer vision \u2014 built with responsible governance from day one.", image: "/images/ai-governance.jpg" },
-      { name: "Advanced Analytics & BI", description: "Transform complex data into real-time, actionable intelligence through dashboards, data pipelines, and enterprise reporting.", image: "/images/analytics-dashboard.jpg" },
-      { name: "Data Engineering & Management", description: "Architect modern data platforms, lakes, and warehouses that unify data across the enterprise for analytics and AI readiness.", image: "/images/climate-infrastructure.jpg" },
-      { name: "Generative AI", description: "Deploy large language models and generative AI solutions securely within enterprise environments, with human-in-the-loop safeguards.", image: "/images/generative-ai.jpg" },
+      { name: "Enterprise AI & Machine Learning", description: "Predictive analytics, NLP, and computer vision — built with responsible governance from day one." },
+      { name: "Advanced Analytics & BI", description: "Real-time dashboards, data pipelines, and enterprise reporting that drive decisions." },
+      { name: "Data Engineering & Management", description: "Modern data platforms, lakes, and warehouses that unify enterprise data for AI readiness." },
+      { name: "Generative AI", description: "Secure LLM deployments within enterprise environments with human-in-the-loop safeguards." },
     ],
   },
   {
     category: "CLOUD & INFRASTRUCTURE",
-    description: "We migrate, modernize, and manage cloud environments across AWS, Azure, and GCP \u2014 with DevSecOps pipelines and infrastructure as code baked in from the start.",
-    image: "/images/cloud-platform.jpg",
+    headline: "Cloud-native. Mission-ready.",
+    description: "We migrate, modernize, and manage cloud environments across AWS, Azure, and GCP — with DevSecOps pipelines and infrastructure as code baked in from the start.",
+    image: "/images/cap-cloud.jpg",
     items: [
-      { name: "Cloud Migration & Modernization", description: "Migrate legacy systems to AWS, Azure, and GCP with minimal disruption \u2014 including re-platforming, re-architecting, and containerization.", image: "/images/cloud-platform.jpg" },
-      { name: "DevSecOps & Automation", description: "Accelerate delivery with CI/CD pipelines, infrastructure as code, and automated security testing embedded throughout the lifecycle.", image: "/images/innovation-summit.jpg" },
-      { name: "Application Development", description: "Build cloud-native applications, APIs, and microservices using modern frameworks and agile engineering practices.", image: "/images/digital-health.jpg" },
-      { name: "Managed Cloud Services", description: "Ongoing cloud operations, optimization, and governance \u2014 ensuring security, cost efficiency, and performance at scale.", image: "/images/energy-grid.jpg" },
+      { name: "Cloud Migration & Modernization", description: "Re-platforming, re-architecting, and containerization across AWS, Azure, and GCP." },
+      { name: "DevSecOps & Automation", description: "CI/CD pipelines, infrastructure as code, and automated security testing throughout the lifecycle." },
+      { name: "Application Development", description: "Cloud-native applications, APIs, and microservices using modern frameworks." },
+      { name: "Managed Cloud Services", description: "Ongoing cloud operations, optimization, and governance at scale." },
     ],
   },
   {
     category: "CYBERSECURITY",
-    description: "Zero trust, threat detection, identity management, and continuous compliance \u2014 we protect the most sensitive networks and data across federal and commercial environments.",
-    image: "/images/cybersecurity-policy.jpg",
+    headline: "Protecting the networks that protect the nation",
+    description: "Zero trust, threat detection, identity management, and continuous compliance — we secure the most sensitive networks and data across federal and commercial environments.",
+    image: "/images/cap-cyber.jpg",
     items: [
-      { name: "Zero Trust Architecture", description: "Design and implement zero-trust frameworks that verify every user, device, and connection \u2014 meeting NIST, CMMC, and FedRAMP standards.", image: "/images/cybersecurity-policy.jpg" },
-      { name: "Threat Detection & Response", description: "24/7 security operations with AI-powered threat detection, incident response, and forensic analysis across hybrid environments.", image: "/images/disaster-response.jpg" },
-      { name: "Identity & Access Management", description: "Enterprise IAM solutions including multi-factor authentication, privileged access management, and identity governance.", image: "/images/industry-federal.jpg" },
-      { name: "Compliance & Risk Management", description: "Continuous compliance monitoring and risk assessment for federal mandates, HIPAA, PCI-DSS, and industry regulations.", image: "/images/coastal-communities.jpg" },
+      { name: "Zero Trust Architecture", description: "End-to-end zero-trust frameworks meeting NIST, CMMC, and FedRAMP standards." },
+      { name: "Threat Detection & Response", description: "24/7 AI-powered security operations with incident response and forensic analysis." },
+      { name: "Identity & Access Management", description: "MFA, privileged access management, and identity governance at enterprise scale." },
+      { name: "Compliance & Risk Management", description: "Continuous monitoring for HIPAA, PCI-DSS, and federal regulatory mandates." },
     ],
   },
   {
     category: "DIGITAL TRANSFORMATION",
-    description: "IT strategy, CRM platforms, intelligent automation, and human-centered design \u2014 we architect transformation programs that deliver measurable business outcomes.",
-    image: "/images/distributed-energy.jpg",
+    headline: "Architecting transformation that delivers",
+    description: "IT strategy, CRM platforms, intelligent automation, and human-centered design — we build transformation programs that deliver measurable business outcomes.",
+    image: "/images/cap-digital.jpg",
     items: [
-      { name: "IT Strategy & Roadmapping", description: "Align technology investments with business outcomes through assessment, architecture planning, and multi-year transformation roadmaps.", image: "/images/transportation-data.jpg" },
-      { name: "Customer Platforms & CRM", description: "Deploy and customize Salesforce and proprietary platforms \u2014 including Sightline\u00AE for utility customer engagement and enterprise CRM solutions.", image: "/images/utility-engagement.jpg" },
-      { name: "Process Automation & RPA", description: "Automate high-volume, repetitive processes with intelligent automation, reducing costs and accelerating service delivery.", image: "/images/grants-automation.jpg" },
-      { name: "User Experience & Design", description: "Human-centered design for digital products, portals, and citizen-facing services that drive adoption and satisfaction.", image: "/images/health-integration.jpg" },
+      { name: "IT Strategy & Roadmapping", description: "Architecture planning and multi-year transformation roadmaps aligned to business outcomes." },
+      { name: "Customer Platforms & CRM", description: "Salesforce deployments and proprietary platforms including Sightline\u00AE for utility engagement." },
+      { name: "Process Automation & RPA", description: "Intelligent automation that reduces costs and accelerates service delivery." },
+      { name: "User Experience & Design", description: "Human-centered design for digital products, portals, and citizen-facing services." },
     ],
   },
 ];
-
-// Alternating highlight banners between sections
-const sectionBanners: Record<string, { title: string; href: string; bgColor: string }> = {
-  "SERVICENOW CONSULTING": {
-    title: "200+ ServiceNow implementations delivered \u2014 across federal, defense, healthcare, and Fortune 500 clients",
-    href: "/contact",
-    bgColor: "bg-emerald-400",
-  },
-  "AI & DATA": {
-    title: "Turning data into decisions \u2014 we\u2019ve deployed 50+ production AI systems across government and enterprise",
-    href: "/insights",
-    bgColor: "bg-cyan-400",
-  },
-  "CYBERSECURITY": {
-    title: "Protecting the networks that protect the nation \u2014 FedRAMP, CMMC, and zero trust at scale",
-    href: "/industries",
-    bgColor: "bg-amber-400",
-  },
-};
 
 export default async function CapabilitiesPage() {
   let capabilities = fallbackCapabilities;
@@ -119,9 +104,10 @@ export default async function CapabilitiesPage() {
       }
       capabilities = Object.entries(grouped).map(([category, items]) => ({
         category,
+        headline: "",
         description: "",
         image: "/images/capabilities-hero.jpg",
-        items: items.map((item) => ({ ...item, image: "/images/capabilities-hero.jpg" })),
+        items,
       }));
     }
   } catch (e) {
@@ -141,98 +127,95 @@ export default async function CapabilitiesPage() {
           bgImageAlt="Close-up of a circuit board representing technology capabilities"
         />
 
-        {/* Capabilities Sections */}
-        {capabilities.map((section, sectionIndex) => (
-          <div key={section.category}>
-            {/* Section Banner with Background Image */}
-            <section
-              id={section.category.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")}
-              className="relative scroll-mt-20 overflow-hidden"
-            >
-              <div className="relative py-20 md:py-28">
-                {/* Background image */}
-                <div className="absolute inset-0">
-                  <Image
-                    src={section.image}
-                    alt=""
-                    fill
-                    className="object-cover"
-                    sizes="100vw"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-r from-gray-900/95 via-gray-900/80 to-gray-900/60" />
-                </div>
+        {/* Capability Sections */}
+        {capabilities.map((section, sectionIndex) => {
+          const isEven = sectionIndex % 2 === 0;
 
-                <div className="relative z-10 max-w-[1400px] mx-auto px-6">
-                  <AnimateIn animation="fadeUp">
-                    <p className="text-accent-cyan text-xs font-semibold tracking-[0.2em] uppercase mb-4">
-                      {String(sectionIndex + 1).padStart(2, "0")} / {String(capabilities.length).padStart(2, "0")}
-                    </p>
-                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-light text-white leading-tight mb-6 max-w-2xl">
-                      {section.category.charAt(0) + section.category.slice(1).toLowerCase()}
-                    </h2>
-                    {section.description && (
-                      <p className="text-gray-300 text-lg max-w-2xl leading-relaxed">
-                        {section.description}
-                      </p>
-                    )}
-                  </AnimateIn>
-                </div>
-              </div>
-            </section>
-
-            {/* Capability Cards Grid */}
-            <section className="bg-white">
-              <div className="max-w-[1400px] mx-auto px-6 py-20">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  {section.items.map((item, i) => (
-                    <AnimateIn key={item.name} animation="fadeUp" delay={i % 3 * 150}>
-                      <GlowCard className="rounded-sm h-full">
-                        <Link
-                          href="/contact"
-                          className="group block bg-white border border-gray-200 rounded-sm overflow-hidden card-lift h-full"
-                        >
-                          <div className="overflow-hidden relative aspect-[16/9]">
-                            <Image
-                              src={item.image}
-                              alt={item.name}
-                              fill
-                              className="object-cover group-hover:scale-105 transition-transform duration-500"
-                              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                            />
-                          </div>
-                          <div className="p-6">
-                            <h3 className="text-lg font-semibold text-gray-900 mb-3 group-hover:text-gray-600 transition-colors">
-                              {item.name}
-                            </h3>
-                            <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                              {item.description}
-                            </p>
-                            <span className="inline-flex items-center gap-2 text-gray-900 text-xs font-semibold tracking-wider uppercase group-hover:gap-3 transition-all">
-                              LEARN MORE
-                              <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                              </svg>
-                            </span>
-                          </div>
-                        </Link>
-                      </GlowCard>
+          return (
+            <div key={section.category}>
+              <section
+                id={section.category.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")}
+                className={`scroll-mt-20 ${isEven ? "bg-white" : "bg-gray-50"}`}
+              >
+                <div className="max-w-[1400px] mx-auto px-6 py-20 md:py-28">
+                  {/* Section Header: Image + Text side by side */}
+                  <div className={`flex flex-col ${isEven ? "lg:flex-row" : "lg:flex-row-reverse"} gap-12 lg:gap-16 items-center mb-16`}>
+                    {/* Image */}
+                    <AnimateIn animation="fadeUp" className="w-full lg:w-1/2">
+                      <div className="relative aspect-[16/10] rounded-sm overflow-hidden">
+                        <Image
+                          src={section.image}
+                          alt={section.category}
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 1024px) 100vw, 50vw"
+                        />
+                        {/* Subtle number overlay */}
+                        <div className="absolute bottom-4 left-4 bg-black/60 backdrop-blur-sm px-3 py-1 rounded-sm">
+                          <span className="text-white/80 text-xs font-semibold tracking-widest">
+                            {String(sectionIndex + 1).padStart(2, "0")} / {String(capabilities.length).padStart(2, "0")}
+                          </span>
+                        </div>
+                      </div>
                     </AnimateIn>
-                  ))}
-                </div>
-              </div>
-            </section>
 
-            {/* Highlight Banner (between select sections) */}
-            {sectionBanners[section.category] && (
-              <HighlightBanner
-                title={sectionBanners[section.category].title}
-                href={sectionBanners[section.category].href}
-                bgColor={sectionBanners[section.category].bgColor}
-                textColor="text-black"
-              />
-            )}
-          </div>
-        ))}
+                    {/* Text */}
+                    <AnimateIn animation="fadeUp" delay={150} className="w-full lg:w-1/2">
+                      <p className="text-accent-cyan text-xs font-semibold tracking-[0.2em] uppercase mb-3">
+                        {section.category}
+                      </p>
+                      {section.headline && (
+                        <h2 className="text-3xl sm:text-4xl font-light text-gray-900 leading-tight mb-5">
+                          {section.headline}
+                        </h2>
+                      )}
+                      {section.description && (
+                        <p className="text-gray-600 text-base leading-relaxed mb-6">
+                          {section.description}
+                        </p>
+                      )}
+                      <Link
+                        href="/contact"
+                        className="inline-flex items-center gap-2 text-gray-900 text-sm font-semibold tracking-wider uppercase hover:gap-3 transition-all"
+                      >
+                        TALK TO OUR TEAM
+                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                      </Link>
+                    </AnimateIn>
+                  </div>
+
+                  {/* Capability Items — clean grid, no images */}
+                  <div className={`grid grid-cols-1 md:grid-cols-2 ${section.items.length > 4 ? "lg:grid-cols-3" : "lg:grid-cols-2"} gap-px bg-gray-200 rounded-sm overflow-hidden`}>
+                    {section.items.map((item, i) => (
+                      <AnimateIn key={item.name} animation="fadeUp" delay={i % 3 * 100}>
+                        <div className={`${isEven ? "bg-white" : "bg-gray-50"} p-8 h-full`}>
+                          <h3 className="text-base font-semibold text-gray-900 mb-2">
+                            {item.name}
+                          </h3>
+                          <p className="text-gray-500 text-sm leading-relaxed">
+                            {item.description}
+                          </p>
+                        </div>
+                      </AnimateIn>
+                    ))}
+                  </div>
+                </div>
+              </section>
+
+              {/* Highlight Banner after ServiceNow section */}
+              {sectionIndex === 0 && (
+                <HighlightBanner
+                  title="200+ ServiceNow implementations delivered across federal, defense, healthcare, and Fortune 500 clients"
+                  href="/contact"
+                  bgColor="bg-emerald-400"
+                  textColor="text-black"
+                />
+              )}
+            </div>
+          );
+        })}
 
         {/* Partners */}
         <section className="bg-white border-t border-gray-200">
