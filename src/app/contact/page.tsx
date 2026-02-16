@@ -56,9 +56,9 @@ export default async function ContactPage() {
           tag="CONTACT US"
           title="Let&apos;s solve your toughest technology challenges"
           subtitle="Whether you need AI strategy, cloud modernization, cybersecurity, or full-scale digital transformation — our experts are ready to help."
-          bgGradient="from-pink-950/30 via-black to-black"
-          bgImage="/images/contact-hero.jpg"
-          bgImageAlt="Sleek modern office corridor with glass partitions"
+          bgGradient="from-yellow-950/30 via-black to-black"
+          bgImage="/images/investors-hero.jpg"
+          bgImageAlt="Corporate glass building against a clear blue sky"
         />
 
         <section className="bg-white">
