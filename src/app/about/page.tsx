@@ -10,13 +10,13 @@ import { getLeaders, getTimelineEvents, getSiteSettings } from "@/lib/sanity";
 import { BreadcrumbJsonLd } from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "About",
+  title: "About CergyPro — Technology Consulting & Digital Transformation",
   description:
-    "Learn about CergyPro — a purpose-driven, technology-forward company with 9,000+ professionals tackling complex challenges for over four decades.",
+    "CergyPro is a global technology consulting firm with 9,000+ professionals delivering AI, analytics, cybersecurity, and digital transformation across government, commercial, and energy sectors.",
   openGraph: {
-    title: "About CergyPro",
+    title: "About CergyPro — Technology Consulting & Digital Transformation",
     description:
-      "Purpose-driven. Technology-forward. People-first. Over four decades of partnering with governments, businesses, and communities.",
+      "9,000+ professionals. 70+ global offices. 45+ years of delivering mission-critical technology solutions for government, commercial, and energy clients.",
     url: "https://www.cergypro.com/about",
   },
 };
@@ -24,36 +24,36 @@ export const metadata: Metadata = {
 export const revalidate = 60;
 
 const fallbackTimeline = [
-  { year: "1969", event: "Founded as a research and consulting firm focused on social programs and public policy." },
-  { year: "1980", event: "Expanded into environmental services, becoming a leader in ecological assessment." },
-  { year: "1999", event: "Entered the technology consulting space with digital modernization capabilities." },
-  { year: "2006", event: "Went public on the NYSE, fueling expansion into federal health and disaster management." },
-  { year: "2015", event: "Acquired a leading digital agency, adding creative and marketing capabilities." },
-  { year: "2020", event: "Launched AI and data analytics practice to address growing demand for intelligent automation." },
-  { year: "2024", event: "Introduced Sightline platform, powered by responsible AI for utility customer engagement." },
+  { year: "1979", event: "Founded as a technology services firm supporting federal defense and intelligence programs." },
+  { year: "1992", event: "Expanded into civilian government IT, securing major contracts for systems integration and data management." },
+  { year: "2001", event: "Grew cybersecurity practice in response to post-9/11 federal demand for information assurance." },
+  { year: "2008", event: "Entered the energy and utilities market, building customer information systems for top-tier utilities." },
+  { year: "2015", event: "Acquired advanced analytics firms, establishing a dedicated AI and data science practice." },
+  { year: "2021", event: "Launched Sightline\u00AE, the industry\u2019s most comprehensive utility customer engagement platform." },
+  { year: "2024", event: "Surpassed $2B in annual revenue and 9,000 employees worldwide, with AI capabilities embedded across all service lines." },
 ];
 
 const fallbackLeaders = [
-  { name: "Sarah Chen", role: "Chief Executive Officer", image: "/images/leader-1.jpg" },
-  { name: "Michael Torres", role: "Chief Operating Officer", image: "/images/leader-2.jpg" },
-  { name: "Dr. Amara Osei", role: "Chief Technology Officer", image: "/images/leader-3.jpg" },
-  { name: "James Whitfield", role: "Chief Financial Officer", image: "/images/leader-4.jpg" },
-  { name: "Lisa Nakamura", role: "EVP, Federal Services", image: "/images/leader-5.jpg" },
-  { name: "David Okonkwo", role: "EVP, Energy & Environment", image: "/images/leader-6.jpg" },
+  { name: "Daniel Rourke", role: "Chairman & Chief Executive Officer", image: "/images/leader-1.jpg" },
+  { name: "Priya Deshmukh", role: "President & Chief Operating Officer", image: "/images/leader-2.jpg" },
+  { name: "Dr. Marcus Hale", role: "Chief Technology Officer", image: "/images/leader-3.jpg" },
+  { name: "Catherine Liu", role: "Chief Financial Officer", image: "/images/leader-4.jpg" },
+  { name: "Robert Vasquez", role: "EVP, Federal & Government Services", image: "/images/leader-5.jpg" },
+  { name: "Adaeze Okafor", role: "EVP, Energy & Utilities", image: "/images/leader-6.jpg" },
 ];
 
 const values = [
-  { title: "Purpose-driven", description: "We tackle the challenges that matter most to society, from climate resilience to public health equity." },
-  { title: "Collaborative", description: "We bring together diverse experts to create solutions that no single discipline could achieve alone." },
-  { title: "Innovative", description: "We invest in emerging technologies and approaches that push the boundaries of what's possible." },
-  { title: "Accountable", description: "We hold ourselves to the highest standards of ethics, transparency, and measurable results." },
+  { title: "Mission-first", description: "We align our work to the outcomes that matter most — national security, reliable energy, and modern public services." },
+  { title: "Technical excellence", description: "We attract and develop top engineering talent, investing continuously in AI, cloud, and cybersecurity capabilities." },
+  { title: "Client partnership", description: "We embed deeply with our clients, treating their missions as our own and measuring success by their results." },
+  { title: "Responsible innovation", description: "We deploy emerging technologies with governance, transparency, and ethics built in from day one." },
 ];
 
 const fallbackStats = [
   { value: "9,000+", label: "Employees worldwide" },
   { value: "70+", label: "Global office locations" },
-  { value: "$2B+", label: "Annual revenue" },
-  { value: "2,000+", label: "Active client engagements" },
+  { value: "$2.1B", label: "Annual revenue (FY 2025)" },
+  { value: "45+", label: "Years of expertise" },
 ];
 
 export default async function AboutPage() {
@@ -102,8 +102,8 @@ export default async function AboutPage() {
       <main>
         <PageHero
           tag="ABOUT CERGYPRO"
-          title="Purpose-driven. Technology-forward. People-first."
-          subtitle="For over four decades, we have partnered with governments, businesses, and communities to solve complex challenges and create lasting impact."
+          title="Technology that advances the missions that matter most"
+          subtitle="For over 45 years, CergyPro has partnered with government agencies, commercial enterprises, and energy companies to deliver mission-critical technology solutions at scale."
           bgGradient="from-emerald-950/30 via-black to-black"
           bgImage="/images/about-hero.jpg"
           bgImageAlt="Executive boardroom with panoramic windows overlooking the city"
@@ -126,13 +126,13 @@ export default async function AboutPage() {
                     OUR MISSION
                   </p>
                   <h2 className="text-3xl md:text-4xl font-light text-gray-900 leading-tight mb-6">
-                    We help our clients navigate complexity and make a meaningful difference
+                    We turn complex technology challenges into operational advantages
                   </h2>
                   <p className="text-gray-600 leading-relaxed mb-4">
-                    CergyPro is a global consulting and technology services company with more than 9,000 professionals focused on making big things possible for our clients. We combine domain expertise, advanced analytics, and human-centered design to deliver solutions that improve lives and strengthen communities.
+                    CergyPro is a global technology consulting firm with more than 9,000 professionals delivering AI, advanced analytics, cybersecurity, and digital transformation solutions. We combine deep domain expertise with enterprise-grade engineering to help organizations operate smarter, faster, and more securely.
                   </p>
                   <p className="text-gray-600 leading-relaxed">
-                    Our work spans federal government, commercial enterprises, and international organizations. Whether helping utilities modernize their customer platforms or supporting disaster recovery for millions of affected families, we bring the same commitment to quality, innovation, and impact.
+                    From modernizing federal agency systems and building zero-trust security architectures to deploying AI-powered utility platforms serving millions of customers, our work drives measurable outcomes for some of the most demanding organizations in the world.
                   </p>
                 </div>
               </AnimateIn>
@@ -232,19 +232,19 @@ export default async function AboutPage() {
           </div>
         </section>
 
-        {/* Corporate Citizenship */}
+        {/* Careers CTA */}
         <section className="bg-emerald-400 text-black">
           <AnimateIn animation="fadeUp">
             <Link
-              href="/about"
+              href="/careers"
               className="group max-w-[1400px] mx-auto px-6 py-16 md:py-20 flex items-center justify-between"
             >
               <div>
                 <p className="text-xs font-semibold tracking-[0.2em] uppercase mb-3 opacity-70">
-                  CORPORATE CITIZENSHIP
+                  JOIN OUR TEAM
                 </p>
                 <h2 className="text-3xl md:text-4xl font-light max-w-2xl leading-tight">
-                  Our commitment to the communities where we live and work
+                  Build your career solving the most complex technology challenges in government, energy, and enterprise
                 </h2>
               </div>
               <svg

@@ -3,13 +3,13 @@ import { getJobListings } from "@/lib/sanity";
 import CareersClient from "./CareersClient";
 
 export const metadata: Metadata = {
-  title: "Careers",
+  title: "Careers — Join Our Team of 9,000+ Technology Professionals | CergyPro",
   description:
-    "Join CergyPro's team of 9,000+ professionals. Explore open positions in technology, consulting, design, and more across the globe.",
+    "Build your career at CergyPro. Explore open positions in AI, cloud engineering, cybersecurity, data science, and digital transformation across 70+ global offices.",
   openGraph: {
     title: "Careers at CergyPro",
     description:
-      "Do work that makes a difference. Explore open positions across technology, consulting, and design.",
+      "Join 9,000+ technologists, engineers, and consultants solving the most complex challenges in government, energy, and enterprise technology.",
     url: "https://www.cergypro.com/careers",
   },
 };
@@ -17,14 +17,14 @@ export const metadata: Metadata = {
 export const revalidate = 60;
 
 const fallbackJobs = [
-  { title: "Senior Data Scientist", location: "Reston, VA", department: "AI & Analytics", type: "Full-time", id: "JR-2024-1847", posted: "2 days ago" },
-  { title: "Cloud Solutions Architect", location: "Remote - US", department: "Technology", type: "Full-time", id: "JR-2024-1832", posted: "3 days ago" },
-  { title: "Disaster Recovery Program Manager", location: "Atlanta, GA", department: "Disaster Management", type: "Full-time", id: "JR-2024-1821", posted: "5 days ago" },
-  { title: "UX Research Lead", location: "New York, NY", department: "Experience & Design", type: "Full-time", id: "JR-2024-1815", posted: "1 week ago" },
-  { title: "Cybersecurity Analyst", location: "Washington, DC", department: "Cybersecurity", type: "Full-time", id: "JR-2024-1799", posted: "1 week ago" },
-  { title: "Energy Policy Consultant", location: "San Francisco, CA", department: "Energy & Utilities", type: "Full-time", id: "JR-2024-1788", posted: "2 weeks ago" },
-  { title: "DevOps Engineer", location: "Remote - US", department: "Technology", type: "Full-time", id: "JR-2024-1776", posted: "2 weeks ago" },
-  { title: "Health Informatics Specialist", location: "Bethesda, MD", department: "Federal Health", type: "Full-time", id: "JR-2024-1762", posted: "2 weeks ago" },
+  { title: "Senior Machine Learning Engineer", location: "Reston, VA", department: "AI & Analytics", type: "Full-time", id: "JR-2025-2103", posted: "2 days ago" },
+  { title: "Cloud Solutions Architect — AWS", location: "Remote - US", department: "Cloud & Infrastructure", type: "Full-time", id: "JR-2025-2091", posted: "3 days ago" },
+  { title: "Zero Trust Security Engineer", location: "Washington, DC", department: "Cybersecurity", type: "Full-time", id: "JR-2025-2087", posted: "3 days ago" },
+  { title: "Senior Data Engineer", location: "Arlington, VA", department: "AI & Analytics", type: "Full-time", id: "JR-2025-2074", posted: "5 days ago" },
+  { title: "Full Stack Developer — React/Node", location: "Remote - US", department: "Application Development", type: "Full-time", id: "JR-2025-2068", posted: "1 week ago" },
+  { title: "DevSecOps Engineer", location: "Reston, VA", department: "Cloud & Infrastructure", type: "Full-time", id: "JR-2025-2055", posted: "1 week ago" },
+  { title: "Utility Platform Analyst — Sightline", location: "Atlanta, GA", department: "Energy & Utilities", type: "Full-time", id: "JR-2025-2041", posted: "2 weeks ago" },
+  { title: "Federal IT Program Manager", location: "Washington, DC", department: "Government Services", type: "Full-time", id: "JR-2025-2033", posted: "2 weeks ago" },
 ];
 
 function formatPostedDate(dateStr: string): string {

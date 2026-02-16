@@ -8,13 +8,13 @@ import Link from "next/link";
 import { getCapabilities } from "@/lib/sanity";
 
 export const metadata: Metadata = {
-  title: "Capabilities",
+  title: "Capabilities — AI, Cloud, Cybersecurity & Digital Transformation | CergyPro",
   description:
-    "Explore CergyPro's capabilities in digital modernization, AI, cloud, cybersecurity, strategy, program implementation, and creative services.",
+    "CergyPro delivers enterprise AI, cloud modernization, cybersecurity, data analytics, and digital transformation solutions for government and commercial clients.",
   openGraph: {
     title: "Our Capabilities | CergyPro",
     description:
-      "Full spectrum of capabilities from technology and consulting to creative services.",
+      "Enterprise AI, cloud migration, zero-trust cybersecurity, advanced analytics, and full-stack digital transformation capabilities.",
     url: "https://www.cergypro.com/capabilities",
   },
 };
@@ -23,31 +23,39 @@ export const revalidate = 60;
 
 const fallbackCapabilities = [
   {
-    category: "TECHNOLOGY",
+    category: "AI & DATA",
     items: [
-      { name: "Digital Modernization", description: "Migrate legacy systems to modern cloud-native architectures that scale with your mission." },
-      { name: "Artificial Intelligence", description: "Deploy responsible AI and machine learning solutions that automate processes and unlock insights." },
-      { name: "Data & Analytics", description: "Turn complex data into actionable intelligence with advanced analytics and visualization." },
-      { name: "Cloud", description: "Design, migrate, and manage secure cloud environments across AWS, Azure, and GCP." },
-      { name: "Cybersecurity", description: "Protect critical infrastructure with zero-trust architecture, threat detection, and compliance." },
+      { name: "Enterprise AI & Machine Learning", description: "Production-grade AI solutions — from predictive analytics and NLP to computer vision — built with responsible governance from day one." },
+      { name: "Advanced Analytics & BI", description: "Transform complex data into real-time, actionable intelligence through dashboards, data pipelines, and enterprise reporting." },
+      { name: "Data Engineering & Management", description: "Architect modern data platforms, lakes, and warehouses that unify data across the enterprise for analytics and AI readiness." },
+      { name: "Generative AI", description: "Deploy large language models and generative AI solutions securely within enterprise environments, with human-in-the-loop safeguards." },
     ],
   },
   {
-    category: "CONSULTING",
+    category: "CLOUD & INFRASTRUCTURE",
     items: [
-      { name: "Strategy & Innovation", description: "Shape long-term strategies that leverage emerging technologies and market opportunities." },
-      { name: "Program Implementation", description: "Deliver large-scale programs on time and on budget with proven project management frameworks." },
-      { name: "Change Management", description: "Drive organizational adoption with communication strategies and stakeholder engagement." },
-      { name: "Policy & Regulatory", description: "Navigate complex regulatory landscapes with evidence-based policy analysis and advocacy." },
-      { name: "Grants Management", description: "Streamline federal grant administration from application through closeout." },
+      { name: "Cloud Migration & Modernization", description: "Migrate legacy systems to AWS, Azure, and GCP with minimal disruption — including re-platforming, re-architecting, and containerization." },
+      { name: "DevSecOps & Automation", description: "Accelerate delivery with CI/CD pipelines, infrastructure as code, and automated security testing embedded throughout the lifecycle." },
+      { name: "Application Development", description: "Build cloud-native applications, APIs, and microservices using modern frameworks and agile engineering practices." },
+      { name: "Managed Cloud Services", description: "Ongoing cloud operations, optimization, and governance — ensuring security, cost efficiency, and performance at scale." },
     ],
   },
   {
-    category: "CREATIVE & COMMUNICATIONS",
+    category: "CYBERSECURITY",
     items: [
-      { name: "Experience & Design", description: "Create human-centered digital experiences that drive engagement and satisfaction." },
-      { name: "Strategic Communications", description: "Craft compelling narratives and multi-channel campaigns that inspire action." },
-      { name: "Marketing & Digital Agency", description: "Full-service marketing, branding, and digital content production for modern audiences." },
+      { name: "Zero Trust Architecture", description: "Design and implement zero-trust frameworks that verify every user, device, and connection — meeting NIST, CMMC, and FedRAMP standards." },
+      { name: "Threat Detection & Response", description: "24/7 security operations with AI-powered threat detection, incident response, and forensic analysis across hybrid environments." },
+      { name: "Identity & Access Management", description: "Enterprise IAM solutions including multi-factor authentication, privileged access management, and identity governance." },
+      { name: "Compliance & Risk Management", description: "Continuous compliance monitoring and risk assessment for federal mandates, HIPAA, PCI-DSS, and industry regulations." },
+    ],
+  },
+  {
+    category: "DIGITAL TRANSFORMATION",
+    items: [
+      { name: "IT Strategy & Roadmapping", description: "Align technology investments with business outcomes through assessment, architecture planning, and multi-year transformation roadmaps." },
+      { name: "Customer Platforms & CRM", description: "Deploy and customize Salesforce, ServiceNow, and proprietary platforms — including Sightline\u00AE for utility customer engagement." },
+      { name: "Process Automation & RPA", description: "Automate high-volume, repetitive processes with intelligent automation, reducing costs and accelerating service delivery." },
+      { name: "User Experience & Design", description: "Human-centered design for digital products, portals, and citizen-facing services that drive adoption and satisfaction." },
     ],
   },
 ];
@@ -83,8 +91,8 @@ export default async function CapabilitiesPage() {
       <main>
         <PageHero
           tag="CAPABILITIES"
-          title="The expertise to deliver what matters"
-          subtitle="From technology and consulting to creative services, we bring a full spectrum of capabilities to every engagement."
+          title="End-to-end technology capabilities built for mission-critical work"
+          subtitle="From AI and cloud to cybersecurity and digital transformation — we engineer solutions that scale, secure, and deliver measurable outcomes."
           bgGradient="from-violet-950/40 via-black to-black"
           bgImage="/images/capabilities-hero.jpg"
           bgImageAlt="Close-up of a circuit board representing technology capabilities"
@@ -139,14 +147,14 @@ export default async function CapabilitiesPage() {
                 PARTNERSHIPS
               </p>
               <h2 className="text-3xl font-light text-gray-900 mb-6">
-                Trusted technology partners
+                Strategic technology alliances
               </h2>
               <p className="text-gray-600 text-sm max-w-xl mx-auto mb-12">
-                We collaborate with leading technology providers to deliver the best solutions for our clients.
+                We maintain deep partnerships with the world&apos;s leading technology platforms to deliver best-in-class solutions across every engagement.
               </p>
             </AnimateIn>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {["AWS", "Microsoft Azure", "Google Cloud", "Salesforce", "ServiceNow", "Palantir", "Snowflake", "Tableau"].map((partner, i) => (
+              {["AWS", "Microsoft Azure", "Google Cloud", "Salesforce", "ServiceNow", "Palo Alto Networks", "Snowflake", "Databricks"].map((partner, i) => (
                 <AnimateIn key={partner} animation="scaleUp" delay={i * 80}>
                   <div className="bg-gray-50 rounded-sm py-8 px-6 flex items-center justify-center hover:bg-gray-100 transition-colors">
                     <span className="text-gray-500 text-sm font-medium">{partner}</span>

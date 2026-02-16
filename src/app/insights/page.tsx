@@ -3,13 +3,13 @@ import { getArticles, getFeaturedArticle } from "@/lib/sanity";
 import InsightsClient from "./InsightsClient";
 
 export const metadata: Metadata = {
-  title: "Insights",
+  title: "Insights — AI, Cybersecurity & Digital Transformation Thought Leadership | CergyPro",
   description:
-    "Explore CergyPro's latest thinking on AI, climate resilience, digital health, energy, and public policy. Articles, webinars, and case studies.",
+    "Expert perspectives on enterprise AI, cybersecurity, cloud modernization, government digital transformation, and energy technology from CergyPro's domain leaders.",
   openGraph: {
     title: "Insights & Perspectives | CergyPro",
     description:
-      "Latest thinking on AI, climate resilience, digital health, energy, and public policy.",
+      "Thought leadership on AI, cybersecurity, cloud, and digital transformation from CergyPro's technology and industry experts.",
     url: "https://www.cergypro.com/insights",
   },
 };
@@ -17,25 +17,25 @@ export const metadata: Metadata = {
 export const revalidate = 60;
 
 const fallbackArticles = [
-  { tag: "ARTIFICIAL INTELLIGENCE", title: "Why responsible AI governance is the next competitive advantage", description: "Organizations that embed ethical AI frameworks early are seeing measurable returns in stakeholder trust.", imageSrc: "/images/ai-governance.jpg", category: "AI & Technology" },
-  { tag: "CLIMATE RESILIENCE", title: "Building adaptive infrastructure for a changing climate", description: "New approaches to infrastructure planning that account for extreme weather events and rising sea levels.", imageSrc: "/images/climate-infrastructure.jpg", category: "Climate" },
-  { tag: "DIGITAL HEALTH", title: "Telehealth adoption trends reshaping federal health programs", description: "A look at how virtual care models are transforming access and outcomes across underserved communities.", imageSrc: "/images/digital-health.jpg", category: "Health" },
-  { tag: "ENERGY", title: "The distributed energy revolution is closer than you think", description: "How microgrids, battery storage, and smart metering are reshaping the utility business model.", imageSrc: "/images/distributed-energy.jpg", category: "Energy" },
-  { tag: "POLICY", title: "Federal cybersecurity mandates: what agencies need to know now", description: "A guide to the latest executive orders and compliance frameworks shaping federal IT security.", imageSrc: "/images/cybersecurity-policy.jpg", category: "Policy" },
-  { tag: "AI & DATA", title: "From predictive to prescriptive: the next frontier in analytics", description: "Moving beyond dashboards to decision engines that recommend actions in real time.", imageSrc: "/images/analytics-dashboard.jpg", category: "AI & Technology" },
-  { tag: "CLIMATE", title: "Coastal communities and the economics of managed retreat", description: "Examining the financial and social trade-offs when rising seas force relocation decisions.", imageSrc: "/images/coastal-communities.jpg", category: "Climate" },
-  { tag: "HEALTH", title: "Behavioral health integration in primary care settings", description: "Breaking down silos between mental health and physical health services improves overall outcomes.", imageSrc: "/images/health-integration.jpg", category: "Health" },
-  { tag: "ENERGY", title: "Electrification of transportation: infrastructure readiness", description: "Assessing grid capacity and charging infrastructure needs for the EV transition.", imageSrc: "/images/ev-infrastructure.jpg", category: "Energy" },
+  { tag: "ARTIFICIAL INTELLIGENCE", title: "From pilot to production: why AI governance is a feature, not a gate", description: "The agencies and enterprises deploying AI fastest are embedding responsible governance from day one. Here\u2019s what they\u2019re doing differently.", imageSrc: "/images/ai-governance.jpg", category: "AI & Data" },
+  { tag: "CYBERSECURITY", title: "Zero trust in practice: lessons from the federal frontline", description: "How three agencies moved beyond frameworks to fully operational zero-trust architectures \u2014 and the pitfalls they avoided.", imageSrc: "/images/cybersecurity-policy.jpg", category: "Cybersecurity" },
+  { tag: "ENERGY & UTILITIES", title: "Grid modernization: balancing reliability with the clean energy transition", description: "Utilities face a dual mandate \u2014 decarbonize while keeping the lights on. New approaches to grid planning are making both possible.", imageSrc: "/images/distributed-energy.jpg", category: "Energy" },
+  { tag: "CLOUD", title: "Cloud migration at scale: avoiding the most expensive mistakes", description: "The difference between a successful cloud migration and a costly one often comes down to architecture decisions made in the first 90 days.", imageSrc: "/images/cloud-platform.jpg", category: "Cloud & Infrastructure" },
+  { tag: "GOVERNMENT", title: "Federal IT modernization: moving beyond lift-and-shift", description: "True modernization means rethinking how agencies deliver services \u2014 not just moving legacy code to new servers.", imageSrc: "/images/grants-automation.jpg", category: "Government" },
+  { tag: "AI & DATA", title: "Building enterprise data platforms that actually get used", description: "Most data platform investments underdeliver because they solve for technology, not for the analysts and operators who need the data.", imageSrc: "/images/analytics-dashboard.jpg", category: "AI & Data" },
+  { tag: "CYBERSECURITY", title: "The CMMC compliance roadmap: what defense contractors need to know", description: "A practical guide to achieving Cybersecurity Maturity Model Certification without stalling your business operations.", imageSrc: "/images/climate-infrastructure.jpg", category: "Cybersecurity" },
+  { tag: "ENERGY", title: "AI-powered demand forecasting is transforming utility operations", description: "Utilities deploying machine learning for load prediction are seeing 15\u201320% improvements in operational efficiency and grid reliability.", imageSrc: "/images/energy-grid.jpg", category: "Energy" },
+  { tag: "GOVERNMENT", title: "How state agencies are using RPA to cut processing times by 60%", description: "Robotic process automation is delivering quick wins for state governments drowning in manual processes and paper forms.", imageSrc: "/images/digital-health.jpg", category: "Government" },
 ];
 
 const fallbackFeatured = {
   tag: "FEATURED INSIGHT",
-  title: "How generative AI is reshaping government service delivery",
-  description: "Federal agencies are experimenting with large language models to streamline citizen interactions, automate document processing, and accelerate decision-making. Here is what early adopters are learning.",
+  title: "The enterprise AI playbook: moving from experimentation to execution",
+  description: "Most organizations have run AI pilots. Few have scaled them. Our latest analysis examines the leadership, architecture, and governance patterns that separate AI leaders from the rest \u2014 across government, energy, and commercial sectors.",
   imageSrc: "/images/generative-ai.jpg",
 };
 
-const fallbackCategories = ["AI & Technology", "Climate", "Health", "Energy", "Policy"];
+const fallbackCategories = ["AI & Data", "Cybersecurity", "Cloud & Infrastructure", "Energy", "Government"];
 
 export default async function InsightsPage() {
   let articles = fallbackArticles;

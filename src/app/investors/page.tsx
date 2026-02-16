@@ -8,37 +8,37 @@ import GlowCard from "@/components/GlowCard";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Investors",
+  title: "Investor Relations — NYSE: CPRO | CergyPro",
   description:
-    "CergyPro investor relations — stock information (NYSE: CPRO), financial highlights, SEC filings, press releases, and corporate governance.",
+    "CergyPro investor relations — stock information (NYSE: CPRO), financial highlights, SEC filings, earnings reports, and corporate governance. $2.1B annual revenue.",
   openGraph: {
-    title: "Investor Relations | CergyPro",
+    title: "Investor Relations | CergyPro (NYSE: CPRO)",
     description:
-      "Access financial reports, SEC filings, and governance information. NYSE: CPRO.",
+      "$2.1B annual revenue. 9,000+ employees. Access financial reports, SEC filings, and governance information.",
     url: "https://www.cergypro.com/investors",
   },
 };
 
 const financialHighlights = [
-  { label: "Revenue (FY 2024)", value: "$2.09B" },
-  { label: "Net Income", value: "$142M" },
-  { label: "Diluted EPS", value: "$7.52" },
-  { label: "Operating Margin", value: "9.8%" },
+  { label: "Revenue (FY 2025)", value: "$2.1B" },
+  { label: "Net Income", value: "$156M" },
+  { label: "Diluted EPS", value: "$8.24" },
+  { label: "Operating Margin", value: "10.2%" },
 ];
 
 const recentFilings = [
-  { date: "Jan 15, 2025", title: "Q4 2024 Earnings Report", type: "10-K" },
-  { date: "Oct 28, 2024", title: "Q3 2024 Quarterly Report", type: "10-Q" },
-  { date: "Jul 29, 2024", title: "Q2 2024 Quarterly Report", type: "10-Q" },
-  { date: "Apr 30, 2024", title: "Q1 2024 Quarterly Report", type: "10-Q" },
-  { date: "Mar 15, 2024", title: "2024 Proxy Statement", type: "DEF 14A" },
+  { date: "Jan 21, 2026", title: "Q4 2025 Earnings Report", type: "10-K" },
+  { date: "Oct 30, 2025", title: "Q3 2025 Quarterly Report", type: "10-Q" },
+  { date: "Jul 28, 2025", title: "Q2 2025 Quarterly Report", type: "10-Q" },
+  { date: "Apr 29, 2025", title: "Q1 2025 Quarterly Report", type: "10-Q" },
+  { date: "Mar 18, 2025", title: "2025 Proxy Statement", type: "DEF 14A" },
 ];
 
 const pressReleases = [
-  { date: "Feb 3, 2025", title: "CergyPro Wins $340M Contract for Federal Health IT Modernization" },
-  { date: "Jan 22, 2025", title: "CergyPro Reports Record Q4 Revenue, Raises 2025 Guidance" },
-  { date: "Dec 10, 2024", title: "CergyPro Acquires CloudFirst Solutions to Expand Cloud Capabilities" },
-  { date: "Nov 5, 2024", title: "CergyPro Named to Forbes Best Employers List for Fifth Year" },
+  { date: "Feb 5, 2026", title: "CergyPro Awarded $480M Federal Cloud Modernization Contract" },
+  { date: "Jan 21, 2026", title: "CergyPro Reports Record Q4 Revenue of $562M, Full Year Revenue Exceeds $2.1B" },
+  { date: "Dec 15, 2025", title: "CergyPro Launches AI Center of Excellence, Expands Generative AI Capabilities" },
+  { date: "Nov 8, 2025", title: "CergyPro Named to Forbes Best Employers for Technology for Sixth Consecutive Year" },
 ];
 
 export default function InvestorsPage() {
@@ -47,9 +47,9 @@ export default function InvestorsPage() {
       <Header />
       <main>
         <PageHero
-          tag="INVESTORS"
-          title="Delivering value for our stakeholders"
-          subtitle="CergyPro is publicly traded on the NYSE under the ticker symbol CPRO. Access financial reports, SEC filings, and governance information."
+          tag="INVESTOR RELATIONS"
+          title="Delivering consistent growth through technology leadership"
+          subtitle="CergyPro (NYSE: CPRO) is a $2.1B technology consulting firm delivering double-digit growth. Access earnings reports, SEC filings, and governance information."
           bgGradient="from-yellow-950/30 via-black to-black"
           bgImage="/images/investors-hero.jpg"
           bgImageAlt="Corporate glass building against a clear blue sky"
@@ -83,7 +83,7 @@ export default function InvestorsPage() {
           <div className="max-w-[1400px] mx-auto px-6 py-20">
             <AnimateIn animation="fadeUp">
               <p className="text-gray-500 text-xs font-semibold tracking-[0.2em] uppercase mb-4">FINANCIAL HIGHLIGHTS</p>
-              <h2 className="text-3xl font-light text-gray-900 mb-12">Fiscal Year 2024</h2>
+              <h2 className="text-3xl font-light text-gray-900 mb-12">Fiscal Year 2025</h2>
             </AnimateIn>
             <StatCounter stats={financialHighlights.map((f) => ({ value: f.value, label: f.label }))} />
           </div>

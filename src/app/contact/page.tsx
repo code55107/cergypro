@@ -8,13 +8,13 @@ import { getOfficeLocations } from "@/lib/sanity";
 import { LocalBusinessJsonLd } from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Contact",
+  title: "Contact CergyPro — Talk to Our Technology Experts",
   description:
-    "Get in touch with CergyPro. Reach our offices in Reston VA, New York, Atlanta, San Francisco, London, and Brussels.",
+    "Connect with CergyPro for AI, cloud, cybersecurity, and digital transformation solutions. Offices in Reston VA, New York, Atlanta, San Francisco, London, and Brussels.",
   openGraph: {
     title: "Contact CergyPro",
     description:
-      "Start a conversation. Offices in Reston VA, New York, Atlanta, San Francisco, London, and Brussels.",
+      "Ready to solve your toughest technology challenges? Reach our team across 70+ offices worldwide.",
     url: "https://www.cergypro.com/contact",
   },
 };
@@ -54,8 +54,8 @@ export default async function ContactPage() {
       <main>
         <PageHero
           tag="CONTACT US"
-          title="Let's start a conversation"
-          subtitle="Whether you have a specific challenge in mind or want to explore how we can work together, we are here to help."
+          title="Let&apos;s solve your toughest technology challenges"
+          subtitle="Whether you need AI strategy, cloud modernization, cybersecurity, or full-scale digital transformation — our experts are ready to help."
           bgGradient="from-pink-950/30 via-black to-black"
           bgImage="/images/contact-hero.jpg"
           bgImageAlt="Sleek modern office corridor with glass partitions"
@@ -79,9 +79,9 @@ export default async function ContactPage() {
                   <div className="space-y-8">
                     {[
                       { title: "General Inquiries", line1: "info@cergypro.com", line2: "+1 (703) 555-0100" },
-                      { title: "Media & Press", line1: "press@cergypro.com", line2: "+1 (703) 555-0150" },
-                      { title: "Partnership Opportunities", line1: "partnerships@cergypro.com", line2: "+1 (703) 555-0175" },
-                      { title: "Supplier Registration", line1: "Visit our supplier portal to register as a vendor or subcontractor.", line2: "" },
+                      { title: "Federal & Government", line1: "federal@cergypro.com", line2: "+1 (703) 555-0150" },
+                      { title: "Commercial & Enterprise", line1: "commercial@cergypro.com", line2: "+1 (703) 555-0175" },
+                      { title: "Teaming & Partnerships", line1: "Visit our partner portal to explore teaming opportunities and subcontractor registration.", line2: "" },
                     ].map((card, i) => (
                       <AnimateIn key={card.title} animation="fadeUp" delay={300 + i * 100}>
                         <div className="bg-gray-50 border border-gray-200 p-6 rounded-sm hover:bg-gray-100 transition-colors">

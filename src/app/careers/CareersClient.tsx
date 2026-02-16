@@ -62,10 +62,10 @@ export default function CareersClient({ jobs }: CareersClientProps) {
               CAREERS
             </p>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-light text-white leading-[1.1] mb-6 max-w-3xl" style={{ opacity: loaded ? 1 : 0, transform: loaded ? "translateY(0)" : "translateY(40px)", transition: "opacity 700ms cubic-bezier(0.16,1,0.3,1) 300ms, transform 700ms cubic-bezier(0.16,1,0.3,1) 300ms" }}>
-              Do work that makes a difference
+              Build technology that moves missions forward
             </h1>
             <p className="text-gray-400 text-lg max-w-2xl mb-10" style={{ opacity: loaded ? 1 : 0, transform: loaded ? "translateY(0)" : "translateY(20px)", transition: "opacity 600ms cubic-bezier(0.16,1,0.3,1) 500ms, transform 600ms cubic-bezier(0.16,1,0.3,1) 500ms" }}>
-              Join a team of 9,000+ professionals tackling the world&apos;s most complex challenges across technology, consulting, and design.
+              Join 9,000+ engineers, data scientists, and consultants delivering AI, cloud, cybersecurity, and digital transformation at scale.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 max-w-2xl" style={{ opacity: loaded ? 1 : 0, transform: loaded ? "translateY(0)" : "translateY(20px)", transition: "opacity 600ms cubic-bezier(0.16,1,0.3,1) 700ms, transform 600ms cubic-bezier(0.16,1,0.3,1) 700ms" }}>
               <label htmlFor="job-search" className="sr-only">Search jobs</label>
@@ -79,7 +79,7 @@ export default function CareersClient({ jobs }: CareersClientProps) {
         <section className="bg-white border-y border-gray-200">
           <AnimateIn animation="fadeUp">
             <div className="max-w-[1400px] mx-auto px-6 py-12 flex flex-col md:flex-row items-center justify-between gap-6">
-              <p className="text-gray-900 text-lg">We are hiring across all practice areas. Explore open positions and find your fit.</p>
+              <p className="text-gray-900 text-lg">We&apos;re hiring across AI, cloud, cybersecurity, and all technology practice areas. Find your fit.</p>
               <Link href="/careers" className="btn-shine inline-flex items-center gap-2 px-6 py-3 border border-gray-300 text-gray-900 text-sm font-semibold tracking-wider uppercase hover:bg-gray-900 hover:text-white transition-all shrink-0">
                 WHY CERGYPRO?
               </Link>
@@ -162,7 +162,7 @@ export default function CareersClient({ jobs }: CareersClientProps) {
           <AnimateIn animation="fadeUp">
             <div className="max-w-[1400px] mx-auto px-6 py-20">
               <h2 className="text-3xl md:text-4xl font-light text-white max-w-3xl leading-tight">
-                At CergyPro, you will work alongside brilliant minds on projects that shape the future of communities, governments, and industries around the world.
+                At CergyPro, you&apos;ll engineer solutions for federal agencies, Fortune 500 companies, and energy providers — work that scales and work that matters.
               </h2>
             </div>
           </AnimateIn>

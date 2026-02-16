@@ -44,8 +44,8 @@ export default function InsightsClient({ articles, featured, categories }: Insig
       <main>
         <PageHero
           tag="INSIGHTS"
-          title="Perspectives on the issues that matter"
-          subtitle="Expert analysis, research, and thought leadership from across our practice areas."
+          title="Expert perspectives on technology and transformation"
+          subtitle="Thought leadership, technical analysis, and strategic guidance from CergyPro\u2019s AI, cybersecurity, cloud, and industry experts."
           bgGradient="from-blue-950/40 via-black to-black"
           bgImage="/images/insights-hero.jpg"
           bgImageAlt="Deep teal abstract ocean depths"

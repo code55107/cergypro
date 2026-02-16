@@ -9,13 +9,13 @@ import Image from "next/image";
 import { getIndustries } from "@/lib/sanity";
 
 export const metadata: Metadata = {
-  title: "Industries",
+  title: "Industries — Government, Energy & Commercial | CergyPro",
   description:
-    "CergyPro serves energy, federal health, disaster management, transportation, environmental services, aviation, and more with deep domain expertise.",
+    "CergyPro delivers technology consulting across federal government, defense & intelligence, state & local, energy & utilities, healthcare, and commercial enterprise sectors.",
   openGraph: {
     title: "Industries We Serve | CergyPro",
     description:
-      "Deep expertise across energy, health, disaster management, transportation, environmental services, and more.",
+      "Deep domain expertise combined with AI, analytics, and cybersecurity capabilities across government, energy, and commercial sectors.",
     url: "https://www.cergypro.com/industries",
   },
 };
@@ -23,15 +23,15 @@ export const metadata: Metadata = {
 export const revalidate = 60;
 
 const fallbackIndustries = [
-  { name: "Energy & Utilities", description: "Helping energy providers modernize grids, engage customers, and transition to clean energy solutions.", image: "/images/industry-energy.jpg" },
-  { name: "Federal Health", description: "Supporting government health agencies with digital transformation, data analytics, and improved patient outcomes.", image: "/images/industry-health.jpg" },
-  { name: "Disaster Management", description: "Providing end-to-end disaster preparedness, response, and recovery solutions that save lives and reduce costs.", image: "/images/industry-disaster.jpg" },
-  { name: "Transportation", description: "Advancing smart mobility, infrastructure resilience, and sustainable transportation systems worldwide.", image: "/images/industry-transport.jpg" },
-  { name: "Environmental Services", description: "Driving environmental compliance, remediation, and sustainability strategies for public and private sectors.", image: "/images/industry-environment.jpg" },
-  { name: "Climate Resilience", description: "Building adaptive strategies that help communities and organizations withstand and recover from climate impacts.", image: "/images/industry-climate.jpg" },
-  { name: "Aviation", description: "Optimizing aviation operations, air traffic management, and airport infrastructure through technology and analytics.", image: "/images/industry-aviation.jpg" },
-  { name: "U.S. Federal", description: "Partnering with federal agencies to deliver mission-critical programs, IT modernization, and policy implementation.", image: "/images/industry-federal.jpg" },
-  { name: "Social Programs", description: "Designing and implementing programs that strengthen education, workforce development, and community well-being.", image: "/images/industry-social.jpg" },
+  { name: "Federal Civilian", description: "Modernizing federal agencies with cloud migration, AI-driven automation, and zero-trust cybersecurity architectures that accelerate mission delivery.", image: "/images/industry-federal.jpg" },
+  { name: "Defense & Intelligence", description: "Delivering secure, mission-critical systems for defense and intelligence communities — from advanced analytics to enterprise IT modernization.", image: "/images/industry-aviation.jpg" },
+  { name: "State & Local Government", description: "Helping state and local agencies digitize citizen services, modernize legacy systems, and implement data-driven decision-making.", image: "/images/industry-social.jpg" },
+  { name: "Energy & Utilities", description: "Powering the energy transition with grid modernization, customer engagement platforms, and AI-optimized operations for utilities nationwide.", image: "/images/industry-energy.jpg" },
+  { name: "Healthcare", description: "Transforming healthcare delivery through interoperability solutions, clinical data analytics, and secure health information exchanges.", image: "/images/industry-health.jpg" },
+  { name: "Commercial Enterprise", description: "Partnering with Fortune 500 companies on digital transformation, AI strategy, cybersecurity, and cloud-native application development.", image: "/images/industry-transport.jpg" },
+  { name: "Financial Services", description: "Enabling financial institutions to accelerate digital banking, strengthen regulatory compliance, and deploy AI-powered risk analytics.", image: "/images/industry-climate.jpg" },
+  { name: "Transportation & Infrastructure", description: "Advancing intelligent transportation systems, infrastructure resilience, and smart mobility solutions through data and technology.", image: "/images/industry-disaster.jpg" },
+  { name: "Environmental & Sustainability", description: "Supporting environmental compliance, climate analytics, and sustainability programs with advanced modeling and data science.", image: "/images/industry-environment.jpg" },
 ];
 
 export default async function IndustriesPage() {
@@ -56,8 +56,8 @@ export default async function IndustriesPage() {
       <main>
         <PageHero
           tag="INDUSTRIES"
-          title="Deep expertise across the sectors that matter most"
-          subtitle="We bring decades of domain knowledge, advanced analytics, and technology to help industries solve their most pressing challenges."
+          title="Domain expertise that drives mission outcomes"
+          subtitle="We combine deep industry knowledge with enterprise-grade technology capabilities to deliver solutions tailored to the unique demands of each sector we serve."
           bgGradient="from-cyan-950/40 via-black to-black"
           bgImage="/images/industries-hero.jpg"
           bgImageAlt="Modern office with architectural ceiling lighting and workspaces"
