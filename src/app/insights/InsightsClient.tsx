@@ -82,6 +82,7 @@ export default function InsightsClient({ articles, featured, categories }: Insig
                 description={featured.description}
                 imageSrc={featured.imageSrc}
                 href={`/insights/${featured.slug}`}
+                imagePosition="top"
               />
             </AnimateIn>
           </div>

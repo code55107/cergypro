@@ -12,6 +12,7 @@ export default function FeaturedCard({
   imageSrc,
   href = "#",
   reverse = false,
+  imagePosition = "center",
 }: {
   tag: string;
   title: string;
@@ -20,6 +21,7 @@ export default function FeaturedCard({
   imageSrc?: string;
   href?: string;
   reverse?: boolean;
+  imagePosition?: string;
 }) {
   return (
     <GlowCard className="rounded-sm">
@@ -38,6 +40,7 @@ export default function FeaturedCard({
               alt={title}
               fill
               className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+              style={{ objectPosition: imagePosition }}
               sizes="(max-width: 768px) 100vw, 50vw"
             />
           ) : (

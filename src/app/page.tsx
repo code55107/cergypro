@@ -216,6 +216,7 @@ export default async function Home() {
                 description={featured.description}
                 imageSrc={featured.imageSrc}
                 href="/insights/sla-aerospace-industry"
+                imagePosition="top"
               />
             </AnimateIn>
           </div>
