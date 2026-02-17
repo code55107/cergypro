@@ -11,7 +11,7 @@ interface SearchOverlayProps {
 const quickLinks = [
   { label: "AI & Analytics", href: "/capabilities" },
   { label: "Energy & Utilities", href: "/industries" },
-  { label: "Careers", href: "/careers" },
+  { label: "ServiceNow", href: "/capabilities" },
   { label: "Federal Health", href: "/industries" },
   { label: "Cloud Solutions", href: "/capabilities" },
   { label: "Contact Us", href: "/contact" },
@@ -116,8 +116,8 @@ export default function SearchOverlay({ isOpen, onClose }: SearchOverlayProps) {
             <div className="space-y-2">
               {[
                 { label: `Search "${query}" in Insights`, href: "/insights" },
-                { label: `Search "${query}" in Careers`, href: "/careers" },
                 { label: `Search "${query}" in Industries`, href: "/industries" },
+                { label: `Search "${query}" in Capabilities`, href: "/capabilities" },
               ].map((item) => (
                 <Link
                   key={item.label}

@@ -130,16 +130,6 @@ export default function Footer() {
           <div>
             <nav aria-label="Quick links" className="flex flex-col gap-0">
               <h3 className="text-gray-900 font-bold text-sm mb-4">
-                <Link href="/careers" className="hover:text-gray-600 transition-colors">
-                  Careers
-                </Link>
-              </h3>
-              <h3 className="text-gray-900 font-bold text-sm mb-4 mt-6">
-                <Link href="/investors" className="hover:text-gray-600 transition-colors">
-                  Investors
-                </Link>
-              </h3>
-              <h3 className="text-gray-900 font-bold text-sm mb-4 mt-6">
                 <Link href="/contact" className="hover:text-gray-600 transition-colors">
                   Contact
                 </Link>

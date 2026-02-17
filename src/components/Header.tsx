@@ -164,29 +164,19 @@ const megaMenus: Record<string, MegaMenuConfig> = {
         ],
       },
       {
-        heading: "Careers",
-        items: [
-          { label: "Open Positions", href: "/careers", desc: "Join our growing team" },
-          { label: "Life at CergyPro", href: "/careers", desc: "Culture, benefits & development" },
-          { label: "Early Careers", href: "/careers", desc: "Graduate & internship programs" },
-          { label: "Diversity & Inclusion", href: "/careers", desc: "Building a workforce that reflects the world" },
-        ],
-      },
-      {
         heading: "Connect",
         items: [
           { label: "Contact Us", href: "/contact", desc: "Start a conversation" },
-          { label: "Investors", href: "/investors", desc: "Financial information & reports" },
           { label: "Partnerships", href: "/contact", desc: "Alliance & teaming opportunities" },
           { label: "Newsroom", href: "/insights", desc: "Press releases & media" },
         ],
       },
     ],
     featured: {
-      tag: "JOIN OUR TEAM",
-      title: "We\u2019re Hiring Across All Practices",
-      desc: "ServiceNow architects, AI engineers, cloud specialists, and cybersecurity consultants. Remote-first with offices worldwide.",
-      href: "/careers",
+      tag: "GET IN TOUCH",
+      title: "Start a Conversation With Our Experts",
+      desc: "Whether you need ServiceNow consulting, AI strategy, or cloud modernization — our team is ready to help.",
+      href: "/contact",
       color: "from-emerald-500/20 to-teal-500/20",
     },
     viewAllLabel: "Learn more about us",
@@ -199,7 +189,6 @@ const navItems = [
   { label: "Industries", href: "/industries", hasDropdown: true },
   { label: "Perspectives", href: "/insights", hasDropdown: true },
   { label: "About", href: "/about", hasDropdown: true },
-  { label: "Careers", href: "/careers", hasDropdown: false },
 ];
 
 /* ─────────────────────────────────────────────
