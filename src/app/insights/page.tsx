@@ -29,11 +29,11 @@ const fallbackArticles = [
 ];
 
 const fallbackFeatured = {
-  slug: "enterprise-ai-playbook",
+  slug: "sla-aerospace-industry",
   tag: "FEATURED INSIGHT",
-  title: "The enterprise AI playbook: moving from experimentation to execution",
-  description: "Most organizations have run AI pilots. Few have scaled them. Our latest analysis examines the leadership, architecture, and governance patterns that separate AI leaders from the rest \u2014 across government, energy, and commercial sectors.",
-  imageSrc: "/images/generative-ai.jpg",
+  title: "SLA management in aerospace: why precision in service commitments defines mission success",
+  description: "In aerospace and defense, a missed service level agreement is not a billing dispute \u2014 it is a mission risk. Our latest analysis explores how leading aerospace organizations are using technology to transform SLA management from reactive contract enforcement into a proactive operational capability.",
+  imageSrc: "/images/industry-aviation.jpg",
 };
 
 const fallbackCategories = ["ServiceNow", "AI & Data", "Cybersecurity", "Cloud & Infrastructure", "Energy", "Client Stories"];

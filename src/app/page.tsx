@@ -123,10 +123,10 @@ const fallbackStories = [
 ];
 
 const fallbackFeatured = {
-  tag: "THOUGHT LEADERSHIP",
-  title: "The enterprise AI playbook: moving from experimentation to execution",
-  description: "Most organizations have run AI pilots. Few have scaled them. Our latest report examines the leadership, architecture, and governance patterns that separate AI leaders from the rest \u2014 across government, energy, and commercial sectors.",
-  imageSrc: "/images/climate-infrastructure.jpg",
+  tag: "AEROSPACE & DEFENSE",
+  title: "SLA management in aerospace: why precision in service commitments defines mission success",
+  description: "In aerospace and defense, a missed service level agreement is not a billing dispute \u2014 it is a mission risk. Our latest analysis explores how leading aerospace organizations are using technology to transform SLA management from reactive contract enforcement into a proactive operational capability.",
+  imageSrc: "/images/industry-aviation.jpg",
 };
 
 export default async function Home() {
@@ -215,7 +215,7 @@ export default async function Home() {
                 title={featured.title}
                 description={featured.description}
                 imageSrc={featured.imageSrc}
-                href="/insights"
+                href="/insights/sla-aerospace-industry"
               />
             </AnimateIn>
           </div>
