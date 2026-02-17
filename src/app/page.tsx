@@ -71,9 +71,9 @@ const fallbackArticles = [
   },
   {
     tag: "CYBERSECURITY",
-    title: "Zero trust in practice: lessons from the federal frontline",
-    description: "How three agencies moved beyond frameworks to fully operational zero-trust architectures \u2014 and the pitfalls they avoided.",
-    imageSrc: "/images/cybersecurity-policy.jpg",
+    title: "The CMMC compliance roadmap: what defense contractors need to know",
+    description: "A practical guide to achieving Cybersecurity Maturity Model Certification without stalling your business operations.",
+    imageSrc: "/images/cmmc-compliance.jpg",
   },
   {
     tag: "SERVICENOW",
