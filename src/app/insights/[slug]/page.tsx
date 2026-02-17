@@ -78,9 +78,9 @@ const fallbackArticles: ArticleData[] = [
   {
     slug: "servicenow-implementations-right",
     tag: "SERVICENOW",
-    title: "Why ServiceNow implementations fail \u2014 and how to get them right",
+    title: "ServiceNow ITSM at scale: lessons from enterprise and federal deployments",
     description: "The difference between a transformative ServiceNow rollout and costly shelf-ware comes down to three architecture decisions most teams overlook.",
-    imageSrc: "/images/cloud-platform.jpg",
+    imageSrc: "/images/servicenow-itsm.jpg",
     body: [
       "ServiceNow has become the enterprise platform of choice for IT service management, operations, and increasingly for HR and customer service workflows. Yet a significant number of implementations fail to deliver expected value — not because of the platform itself, but because of how organizations approach the rollout.",
       "After leading dozens of ServiceNow implementations across government and enterprise clients, we have identified three architectural decisions that consistently separate successful deployments from costly failures: platform governance from day one, process optimization before configuration, and a clear integration strategy.",

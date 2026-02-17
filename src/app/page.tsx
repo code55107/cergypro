@@ -77,9 +77,9 @@ const fallbackArticles = [
   },
   {
     tag: "SERVICENOW",
-    title: "Why ServiceNow implementations fail \u2014 and how to get them right",
+    title: "ServiceNow ITSM at scale: lessons from enterprise and federal deployments",
     description: "The difference between a transformative ServiceNow rollout and a costly shelf-ware project comes down to three architecture decisions most teams overlook.",
-    imageSrc: "/images/distributed-energy.jpg",
+    imageSrc: "/images/servicenow-itsm.jpg",
   },
 ];
 
