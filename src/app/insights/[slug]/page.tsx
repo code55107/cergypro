@@ -119,7 +119,7 @@ const fallbackArticles: ArticleData[] = [
     tag: "CYBERSECURITY",
     title: "The CMMC compliance roadmap: what defense contractors need to know",
     description: "A practical guide to achieving Cybersecurity Maturity Model Certification without stalling your business operations.",
-    imageSrc: "/images/climate-infrastructure.jpg",
+    imageSrc: "/images/cmmc-compliance.jpg",
     body: [
       "The Cybersecurity Maturity Model Certification (CMMC) program is reshaping how the Department of Defense evaluates the cybersecurity posture of its contractor base. For the thousands of defense industrial base companies that handle Controlled Unclassified Information (CUI), achieving CMMC certification is no longer optional — it is a condition of doing business.",
       "The path to certification can feel overwhelming, particularly for small and mid-size contractors who lack dedicated cybersecurity teams. But with a structured approach, compliance is achievable without disrupting core business operations.",
