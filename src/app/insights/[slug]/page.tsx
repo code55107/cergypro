@@ -106,7 +106,7 @@ const fallbackArticles: ArticleData[] = [
     tag: "AI & DATA",
     title: "Building enterprise data platforms that actually get used",
     description: "Most data platform investments underdeliver because they solve for technology, not for the analysts and operators who need the data.",
-    imageSrc: "/images/analytics-dashboard.jpg",
+    imageSrc: "/images/energy-grid.jpg",
     body: [
       "The promise of enterprise data platforms is compelling: a single source of truth that enables data-driven decision-making across the organization. The reality is often different — expensive platforms that sit underutilized because they were designed for data engineers, not for the business users who need the insights.",
       "The most successful data platform initiatives we have seen start not with technology selection, but with user research. Understanding how analysts, operators, and executives actually consume data — and what decisions they are trying to make — is the single most important input to platform design.",
@@ -132,7 +132,7 @@ const fallbackArticles: ArticleData[] = [
     tag: "ENERGY",
     title: "AI-powered demand forecasting is transforming utility operations",
     description: "Utilities deploying machine learning for load prediction are seeing 15\u201320% improvements in operational efficiency and grid reliability.",
-    imageSrc: "/images/energy-grid.jpg",
+    imageSrc: "/images/analytics-dashboard.jpg",
     body: [
       "Accurate demand forecasting has always been critical for utility operations, but the proliferation of distributed energy resources, electric vehicles, and extreme weather events has made traditional forecasting methods increasingly unreliable.",
       "Machine learning models trained on granular historical data, weather patterns, economic indicators, and real-time grid telemetry are delivering step-function improvements in forecast accuracy. Utilities deploying these models are seeing 15-20% improvements in operational efficiency through better resource allocation, reduced reserve margins, and more effective demand response programs.",
