@@ -351,8 +351,8 @@ export default async function Home() {
           </div>
         </section>
 
-        {/* Webinars / Events */}
-        <section className="bg-white">
+        {/* Webinars / Events — hidden for now, kept for future use */}
+        {/* <section className="bg-white">
           <div className="max-w-[1400px] mx-auto px-6 py-20">
             <SectionHeading
               label="Events"
@@ -373,7 +373,7 @@ export default async function Home() {
               ))}
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Client Stories — ServiceNow Use Cases */}
         <section className="bg-white">
