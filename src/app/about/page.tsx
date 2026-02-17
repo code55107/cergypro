@@ -2,11 +2,12 @@ import type { Metadata } from "next";
 import Header from "@/components/Header";
 import PageHero from "@/components/PageHero";
 import StatCounter from "@/components/StatCounter";
+import FeaturedCard from "@/components/FeaturedCard";
 import Footer from "@/components/Footer";
 import AnimateIn from "@/components/AnimateIn";
 import Link from "next/link";
 import Image from "next/image";
-import { getLeaders, getTimelineEvents, getSiteSettings } from "@/lib/sanity";
+import { getSiteSettings } from "@/lib/sanity";
 import { BreadcrumbJsonLd } from "@/components/JsonLd";
 
 export const metadata: Metadata = {
@@ -23,25 +24,26 @@ export const metadata: Metadata = {
 
 export const revalidate = 60;
 
-const fallbackTimeline = [
-  { year: "1979", event: "Founded as a technology services firm supporting federal defense and intelligence programs." },
-  { year: "1992", event: "Expanded into civilian government IT, securing major contracts for systems integration and data management." },
-  { year: "2001", event: "Grew cybersecurity practice in response to post-9/11 federal demand for information assurance." },
-  { year: "2008", event: "Entered the energy and utilities market, building customer information systems for top-tier utilities." },
-  { year: "2015", event: "Acquired advanced analytics firms, establishing a dedicated AI and data science practice." },
-  { year: "2018", event: "Launched ServiceNow consulting practice, rapidly growing to become the firm\u2019s largest service line with ITSM, ITOM, SecOps, and HR capabilities." },
-  { year: "2021", event: "Launched Sightline\u00AE, the industry\u2019s most comprehensive utility customer engagement platform." },
-  { year: "2024", event: "Surpassed $2B in annual revenue and 9,000 employees worldwide, with ServiceNow and AI capabilities embedded across all service lines." },
-];
+/* ── Fallback data kept for future reactivation ── */
+// const fallbackTimeline = [
+//   { year: "1979", event: "Founded as a technology services firm supporting federal defense and intelligence programs." },
+//   { year: "1992", event: "Expanded into civilian government IT, securing major contracts for systems integration and data management." },
+//   { year: "2001", event: "Grew cybersecurity practice in response to post-9/11 federal demand for information assurance." },
+//   { year: "2008", event: "Entered the energy and utilities market, building customer information systems for top-tier utilities." },
+//   { year: "2015", event: "Acquired advanced analytics firms, establishing a dedicated AI and data science practice." },
+//   { year: "2018", event: "Launched ServiceNow consulting practice, rapidly growing to become the firm\u2019s largest service line with ITSM, ITOM, SecOps, and HR capabilities." },
+//   { year: "2021", event: "Launched Sightline\u00AE, the industry\u2019s most comprehensive utility customer engagement platform." },
+//   { year: "2024", event: "Surpassed $2B in annual revenue and 9,000 employees worldwide, with ServiceNow and AI capabilities embedded across all service lines." },
+// ];
 
-const fallbackLeaders = [
-  { name: "Daniel Rourke", role: "Chairman & Chief Executive Officer", image: "/images/leader-1.jpg" },
-  { name: "Priya Deshmukh", role: "President & Chief Operating Officer", image: "/images/leader-2.jpg" },
-  { name: "Dr. Marcus Hale", role: "Chief Technology Officer", image: "/images/leader-3.jpg" },
-  { name: "Catherine Liu", role: "Chief Financial Officer", image: "/images/leader-4.jpg" },
-  { name: "Robert Vasquez", role: "EVP, Federal & Government Services", image: "/images/leader-5.jpg" },
-  { name: "Adaeze Okafor", role: "EVP, Energy & Utilities", image: "/images/leader-6.jpg" },
-];
+// const fallbackLeaders = [
+//   { name: "Daniel Rourke", role: "Chairman & Chief Executive Officer", image: "/images/leader-1.jpg" },
+//   { name: "Priya Deshmukh", role: "President & Chief Operating Officer", image: "/images/leader-2.jpg" },
+//   { name: "Dr. Marcus Hale", role: "Chief Technology Officer", image: "/images/leader-3.jpg" },
+//   { name: "Catherine Liu", role: "Chief Financial Officer", image: "/images/leader-4.jpg" },
+//   { name: "Robert Vasquez", role: "EVP, Federal & Government Services", image: "/images/leader-5.jpg" },
+//   { name: "Adaeze Okafor", role: "EVP, Energy & Utilities", image: "/images/leader-6.jpg" },
+// ];
 
 const values = [
   { title: "Mission-first", description: "We align our work to the outcomes that matter most — national security, reliable energy, and modern public services." },
@@ -57,33 +59,67 @@ const fallbackStats = [
   { value: "45+", label: "Years of expertise" },
 ];
 
+const differentiators = [
+  {
+    title: "ServiceNow Elite Partner",
+    description: "One of the largest independent ServiceNow practices globally, with certified architects across ITSM, ITOM, HR, CSM, and SecOps.",
+    icon: (
+      <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75" />
+      </svg>
+    ),
+  },
+  {
+    title: "Cross-Sector Expertise",
+    description: "Deep domain knowledge spanning federal, defense, energy, healthcare, and Fortune 500 enterprises — we understand your industry\u2019s unique challenges.",
+    icon: (
+      <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+      </svg>
+    ),
+  },
+  {
+    title: "Mission-Critical Track Record",
+    description: "45+ years delivering technology solutions where failure is not an option — from national security systems to grid operations serving millions.",
+    icon: (
+      <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+      </svg>
+    ),
+  },
+  {
+    title: "AI-First Approach",
+    description: "We embed AI and automation into every engagement, from Now Assist deployments to custom ML models that drive measurable operational improvements.",
+    icon: (
+      <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456z" />
+      </svg>
+    ),
+  },
+];
+
+const trustBadges = [
+  "ServiceNow Elite Partner",
+  "AWS Advanced Partner",
+  "Microsoft Gold Partner",
+  "Google Cloud Partner",
+  "FedRAMP Authorized",
+  "ISO 27001 Certified",
+];
+
+const featuredCaseStudy = {
+  tag: "ASTRAZENECA \u00b7 HEALTHCARE",
+  title: "AstraZeneca saves 30,000+ hours annually by replacing manual tasks with AI-powered automation",
+  description: "How one of the world\u2019s largest pharmaceutical companies unified 60,000 laboratory requests and transformed employee onboarding using ServiceNow.",
+  imageSrc: "/images/az-hero.jpg",
+  href: "/insights/astrazeneca-servicenow",
+};
+
 export default async function AboutPage() {
-  let timeline = fallbackTimeline;
-  let leaders = fallbackLeaders;
   let stats = fallbackStats;
 
   try {
-    const [sanityLeaders, sanityTimeline, settings] = await Promise.all([
-      getLeaders(),
-      getTimelineEvents(),
-      getSiteSettings(),
-    ]);
-
-    if (sanityLeaders?.length > 0) {
-      leaders = sanityLeaders.map((l: { name: string; role: string; image: string }) => ({
-        name: l.name,
-        role: l.role,
-        image: l.image,
-      }));
-    }
-
-    if (sanityTimeline?.length > 0) {
-      timeline = sanityTimeline.map((t: { year: string; event: string }) => ({
-        year: t.year,
-        event: t.event,
-      }));
-    }
-
+    const settings = await getSiteSettings();
     if (settings?.stats?.length > 0) {
       stats = settings.stats;
     }
@@ -176,8 +212,84 @@ export default async function AboutPage() {
           </div>
         </section>
 
-        {/* Leadership */}
+        {/* Why CergyPro */}
+        <section className="bg-white border-t border-gray-200">
+          <div className="max-w-[1400px] mx-auto px-6 py-20">
+            <AnimateIn animation="fadeUp">
+              <p className="text-gray-500 text-xs font-semibold tracking-[0.2em] uppercase mb-4">
+                WHY CERGYPRO
+              </p>
+              <h2 className="text-3xl font-light text-gray-900 mb-12">
+                What sets us apart
+              </h2>
+            </AnimateIn>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {differentiators.map((d, i) => (
+                <AnimateIn key={d.title} animation="fadeUp" delay={i * 120}>
+                  <div className="border-t border-gray-200 pt-6">
+                    <div className="text-gray-400 mb-4">
+                      {d.icon}
+                    </div>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-3">{d.title}</h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">{d.description}</p>
+                  </div>
+                </AnimateIn>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Trusted By */}
+        <section className="bg-gray-50">
+          <div className="max-w-[1400px] mx-auto px-6 py-20">
+            <AnimateIn animation="fadeUp">
+              <p className="text-gray-500 text-xs font-semibold tracking-[0.2em] uppercase mb-4 text-center">
+                TRUSTED BY
+              </p>
+              <h2 className="text-3xl font-light text-gray-900 mb-12 text-center">
+                Partners and certifications
+              </h2>
+            </AnimateIn>
+            <AnimateIn animation="fadeUp" delay={150}>
+              <div className="flex flex-wrap justify-center gap-4 md:gap-6">
+                {trustBadges.map((badge) => (
+                  <span
+                    key={badge}
+                    className="px-5 py-3 bg-white border border-gray-200 rounded-sm text-sm font-medium text-gray-600 tracking-wide"
+                  >
+                    {badge}
+                  </span>
+                ))}
+              </div>
+            </AnimateIn>
+          </div>
+        </section>
+
+        {/* Client Success */}
         <section className="bg-white">
+          <div className="max-w-[1400px] mx-auto px-6 py-20">
+            <AnimateIn animation="fadeUp">
+              <p className="text-gray-500 text-xs font-semibold tracking-[0.2em] uppercase mb-4">
+                CLIENT SUCCESS
+              </p>
+              <h2 className="text-3xl font-light text-gray-900 mb-12">
+                Delivering measurable outcomes
+              </h2>
+            </AnimateIn>
+            <AnimateIn animation="fadeUp" delay={150}>
+              <FeaturedCard
+                tag={featuredCaseStudy.tag}
+                title={featuredCaseStudy.title}
+                description={featuredCaseStudy.description}
+                imageSrc={featuredCaseStudy.imageSrc}
+                href={featuredCaseStudy.href}
+              />
+            </AnimateIn>
+          </div>
+        </section>
+
+        {/* Leadership — hidden for now, kept for future use */}
+        {/* <section className="bg-white">
           <div className="max-w-[1400px] mx-auto px-6 py-20">
             <AnimateIn animation="fadeUp">
               <p className="text-gray-500 text-xs font-semibold tracking-[0.2em] uppercase mb-4">
@@ -207,10 +319,10 @@ export default async function AboutPage() {
               ))}
             </div>
           </div>
-        </section>
+        </section> */}
 
-        {/* Timeline */}
-        <section className="bg-white">
+        {/* Timeline — hidden for now, kept for future use */}
+        {/* <section className="bg-white">
           <div className="max-w-[1400px] mx-auto px-6 py-20">
             <AnimateIn animation="fadeUp">
               <p className="text-gray-500 text-xs font-semibold tracking-[0.2em] uppercase mb-4">
@@ -231,21 +343,21 @@ export default async function AboutPage() {
               ))}
             </div>
           </div>
-        </section>
+        </section> */}
 
-        {/* Careers CTA */}
+        {/* Contact CTA */}
         <section className="bg-emerald-400 text-black">
           <AnimateIn animation="fadeUp">
             <Link
-              href="/careers"
+              href="/contact"
               className="group max-w-[1400px] mx-auto px-6 py-16 md:py-20 flex items-center justify-between"
             >
               <div>
                 <p className="text-xs font-semibold tracking-[0.2em] uppercase mb-3 opacity-70">
-                  JOIN OUR TEAM
+                  GET IN TOUCH
                 </p>
                 <h2 className="text-3xl md:text-4xl font-light max-w-2xl leading-tight">
-                  Build your career solving the most complex technology challenges in government, energy, and enterprise
+                  Ready to tackle your biggest technology challenges?
                 </h2>
               </div>
               <svg
